@@ -1,0 +1,47 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "keywords": [],
+  "author": {
+    "name": "Adam Juskiewicz"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint --fix src/*.tsx",
+    "code-check": "npm run lint --max-warnings=0 && npm run tsc",
+    "prettier": "prettier --write src/**/*.tsx"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@chakra-ui/icons": "^2.1.1",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "framer-motion": "^11.5.4",
+    "three": "^0.168.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "i18next": "^23.15.1",
+    "react-i18next": "^15.0.2",
+    "i18next-browser-languagedetector": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^9.10.0",
+    "eslint-plugin-react": "^7.36.1",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.9",
+    "eslint-plugin-prettier": "^5.2.1",
+    "@typescript-eslint/eslint-plugin": "^8.6.0",
+    "@typescript-eslint/parser": "8.6.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1"
+  }
+}

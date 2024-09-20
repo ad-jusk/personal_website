@@ -1,0 +1,6 @@
+export default {
+  semi: true,
+  endOfLine: "crlf",
+  trailingComma: "es5",
+  printWidth: 100,
+};
