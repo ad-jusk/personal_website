@@ -1,7 +1,14 @@
+import { ChakraProvider, Heading } from "@chakra-ui/react";
+import chakraTheme from "@lib/theme";
 import { ReactElement } from "react";
 
-const App = (): ReactElement => {
-  return <h1>HELLO</h1>;
+export const App = (): ReactElement => {
+
+  return (
+    <ChakraProvider theme={chakraTheme}>
+      <Heading variant={"sectionTitle"}>HELLO</Heading>
+    </ChakraProvider>
+  );
 };
 
 export default App;
