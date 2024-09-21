@@ -1,12 +1,12 @@
-import { ChakraProvider, Heading } from "@chakra-ui/react";
-import chakraTheme from "@lib/theme";
+import { ChakraProvider } from "@chakra-ui/react";
+import chakraTheme from "@utils/theme";
+import { Router } from "@routes/Router";
 import { ReactElement } from "react";
 
 export const App = (): ReactElement => {
-
   return (
     <ChakraProvider theme={chakraTheme}>
-      <Heading variant={"sectionTitle"}>HELLO</Heading>
+      <Router />
     </ChakraProvider>
   );
 };
