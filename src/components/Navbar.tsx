@@ -1,9 +1,23 @@
-import { Box, Container, Flex, Heading, Link, Stack, useColorModeValue } from "@chakra-ui/react";
-import { ReactElement, ReactNode, useEffect, useState } from "react";
+import {
+  Box,
+  Container,
+  Flex,
+  Heading,
+  IconButton,
+  Link,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  Stack,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import { ReactElement, ReactNode } from "react";
 import { Logo } from "./Logo";
 import ThemeToggleButton from "./ThemeToggleButton";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import { LanguageToggleButton } from "./LanguageToggleButton";
+import { HamburgerIcon } from "@chakra-ui/icons";
 
 type LinkProps = {
   href: string;
@@ -11,11 +25,9 @@ type LinkProps = {
 };
 
 const NavbarLink = ({ href, children }: LinkProps): ReactElement => {
-  const inactiveColor = useColorModeValue("gray.800", "whiteAlpha.900");
-  const [isActive, setActive] = useState(false);
   const location = useLocation();
-
-  useEffect(() => setActive(href === location.pathname), [location.pathname]);
+  const isActive = location.pathname === href;
+  const inactiveColor = useColorModeValue("gray.800", "whiteAlpha.900");
 
   return (
     <Link
@@ -60,13 +72,36 @@ export const Navbar = (): ReactElement => {
           <NavbarLink href="/contact">Contact</NavbarLink>
         </Stack>
 
-        <Box flex={1} alignItems="right">
+        <Flex flex={1} justify="right">
           <ThemeToggleButton />
-
           <Box display="inline-block" ml={2}>
             <LanguageToggleButton />
           </Box>
-        </Box>
+          <Box display={{ base: "inline-block", md: "none" }} ml={2}>
+            <Menu isLazy>
+              <MenuButton
+                as={IconButton}
+                icon={<HamburgerIcon />}
+                variant="outline"
+                aria-label="Context menu"
+              />
+              <MenuList>
+                <MenuItem as={RouterLink} to="/">
+                  Home
+                </MenuItem>
+                <MenuItem as={RouterLink} to="/experience">
+                  Experience
+                </MenuItem>
+                <MenuItem as={RouterLink} to="/skills">
+                  Skills
+                </MenuItem>
+                <MenuItem as={RouterLink} to="/contact">
+                  Contact
+                </MenuItem>
+              </MenuList>
+            </Menu>
+          </Box>
+        </Flex>
       </Container>
     </Box>
   );
