@@ -1,22 +1,30 @@
 import { Box, Container, Flex, Heading, Link, Stack, useColorModeValue } from "@chakra-ui/react";
-import { ReactElement, ReactNode } from "react";
-import { useLocation } from "react-router-dom";
+import { ReactElement, ReactNode, useEffect, useState } from "react";
+import { Logo } from "./Logo";
+import ThemeToggleButton from "./ThemeToggleButton";
+import { Link as RouterLink, useLocation } from "react-router-dom";
+import { LanguageToggleButton } from "./LanguageToggleButton";
 
 type LinkProps = {
   href: string;
-  active: boolean;
   children?: ReactNode;
 };
 
-const NavbarLink = ({ href, active, children }: LinkProps): ReactElement => {
+const NavbarLink = ({ href, children }: LinkProps): ReactElement => {
   const inactiveColor = useColorModeValue("gray.800", "whiteAlpha.900");
+  const [isActive, setActive] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => setActive(href === location.pathname), [location.pathname]);
+
   return (
     <Link
-      href={href}
+      as={RouterLink}
+      to={href}
       p={2}
-      bg={active ? "grassTeal" : undefined}
+      bg={isActive ? "grassTeal" : undefined}
       borderRadius={10}
-      color={active ? "#202023" : inactiveColor}
+      color={isActive ? "#202023" : inactiveColor}
     >
       {children}
     </Link>
@@ -24,7 +32,6 @@ const NavbarLink = ({ href, active, children }: LinkProps): ReactElement => {
 };
 
 export const Navbar = (): ReactElement => {
-  const location = useLocation();
   return (
     <Box
       as="nav"
@@ -36,7 +43,7 @@ export const Navbar = (): ReactElement => {
       <Container display="flex" p={2} maxW="container.md">
         <Flex align="center">
           <Heading as="h1" size="lg" letterSpacing="tighter">
-            LOGO
+            <Logo />
           </Heading>
         </Flex>
         <Stack
@@ -47,19 +54,19 @@ export const Navbar = (): ReactElement => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <NavbarLink href="/" active={"/" === location.pathname}>
-            Home
-          </NavbarLink>
-          <NavbarLink href="/experience" active={"/experience" === location.pathname}>
-            Experience
-          </NavbarLink>
-          <NavbarLink href="/skills" active={"/skills" === location.pathname}>
-            Skills
-          </NavbarLink>
-          <NavbarLink href="/contact" active={"/contact" === location.pathname}>
-            Contact
-          </NavbarLink>
+          <NavbarLink href="/">Home</NavbarLink>
+          <NavbarLink href="/experience">Experience</NavbarLink>
+          <NavbarLink href="/skills">Skills</NavbarLink>
+          <NavbarLink href="/contact">Contact</NavbarLink>
         </Stack>
+
+        <Box flex={1} alignItems="right">
+          <ThemeToggleButton />
+
+          <Box display="inline-block" ml={2}>
+            <LanguageToggleButton />
+          </Box>
+        </Box>
       </Container>
     </Box>
   );
