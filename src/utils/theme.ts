@@ -4,7 +4,7 @@ import { mode, StyleFunctionProps } from "@chakra-ui/theme-tools";
 const styles = {
   global: (props: StyleFunctionProps) => ({
     body: {
-      bg: mode("#FFF4E4", "#3A2E39")(props),
+      bg: mode("#fefefe", "#3a2e39")(props),
     },
   }),
 };
@@ -25,7 +25,7 @@ const components = {
   },
   Link: {
     baseStyle: (props: StyleFunctionProps) => ({
-      color: mode("#3D7AED", "#FF63C3")(props),
+      color: mode("#3d7aed", "#ff63c3")(props),
       textUnderlineOffset: 3,
     }),
   },
@@ -36,7 +36,7 @@ const fonts = {
 };
 
 const colors = {
-  grassTeal: "#88CCCA",
+  grassTeal: "#88ccca",
 };
 
 const config = {

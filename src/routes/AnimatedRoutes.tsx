@@ -4,6 +4,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 
 const Home = lazy(() => import("./pages/Home"));
 const Experience = lazy(() => import("./pages/Experience"));
+const Projects = lazy(() => import("./pages/Projects"));
 const Skills = lazy(() => import("./pages/Skills"));
 const Contact = lazy(() => import("./pages/Contact"));
 
@@ -26,6 +27,14 @@ export const AnimatedRoutes = (): ReactElement => {
           element={
             <Suspense fallback={null}>
               <Experience />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/projects"
+          element={
+            <Suspense fallback={null}>
+              <Projects />
             </Suspense>
           }
         />

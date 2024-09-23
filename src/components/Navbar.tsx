@@ -12,20 +12,22 @@ import {
   Stack,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { ReactElement, ReactNode } from "react";
+import { ReactElement } from "react";
 import { Logo } from "./Logo";
 import ThemeToggleButton from "./ThemeToggleButton";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import { LanguageToggleButton } from "./LanguageToggleButton";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { useTranslation } from "react-i18next";
 
 type LinkProps = {
   href: string;
-  children?: ReactNode;
+  translationKey: string;
 };
 
-const NavbarLink = ({ href, children }: LinkProps): ReactElement => {
+const NavbarLink = ({ href, translationKey }: LinkProps): ReactElement => {
   const location = useLocation();
+  const { t } = useTranslation();
   const isActive = location.pathname === href;
   const inactiveColor = useColorModeValue("gray.800", "whiteAlpha.900");
 
@@ -38,8 +40,18 @@ const NavbarLink = ({ href, children }: LinkProps): ReactElement => {
       borderRadius={10}
       color={isActive ? "#202023" : inactiveColor}
     >
-      {children}
+      {t(translationKey)}
     </Link>
+  );
+};
+
+const MenuLink = ({ href, translationKey }: LinkProps): ReactElement => {
+  const { t } = useTranslation();
+
+  return (
+    <MenuItem as={RouterLink} to={href}>
+      {t(translationKey)}
+    </MenuItem>
   );
 };
 
@@ -66,10 +78,10 @@ export const Navbar = (): ReactElement => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <NavbarLink href="/">Home</NavbarLink>
-          <NavbarLink href="/experience">Experience</NavbarLink>
-          <NavbarLink href="/skills">Skills</NavbarLink>
-          <NavbarLink href="/contact">Contact</NavbarLink>
+          <NavbarLink href="/experience" translationKey="experience" />
+          <NavbarLink href="/projects" translationKey="projects" />
+          <NavbarLink href="/skills" translationKey="skills" />
+          <NavbarLink href="/contact" translationKey="contact" />
         </Stack>
 
         <Flex flex={1} justify="right">
@@ -86,18 +98,10 @@ export const Navbar = (): ReactElement => {
                 aria-label="Context menu"
               />
               <MenuList>
-                <MenuItem as={RouterLink} to="/">
-                  Home
-                </MenuItem>
-                <MenuItem as={RouterLink} to="/experience">
-                  Experience
-                </MenuItem>
-                <MenuItem as={RouterLink} to="/skills">
-                  Skills
-                </MenuItem>
-                <MenuItem as={RouterLink} to="/contact">
-                  Contact
-                </MenuItem>
+                <MenuLink href="/experience" translationKey="experience" />
+                <MenuLink href="/projects" translationKey="projects" />
+                <MenuLink href="/skills" translationKey="skills" />
+                <MenuLink href="/contact" translationKey="contact" />
               </MenuList>
             </Menu>
           </Box>

@@ -1,9 +1,17 @@
 import { Box, IconButton, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
 import { ReactElement } from "react";
+import { useTranslation } from "react-i18next";
 import { IoLanguage } from "react-icons/io5";
 
-// TODO: integrate with i18n
+type SupportedLanguage = "en" | "pl";
+
 export const LanguageToggleButton = (): ReactElement => {
+  const { i18n } = useTranslation();
+
+  const changeLanguage = (lng: SupportedLanguage): void => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <Box>
       <Menu isLazy>
@@ -14,8 +22,8 @@ export const LanguageToggleButton = (): ReactElement => {
           icon={<IoLanguage />}
         />
         <MenuList>
-          <MenuItem>English</MenuItem>
-          <MenuItem>Polski</MenuItem>
+          <MenuItem onClick={() => changeLanguage("en")}>English</MenuItem>
+          <MenuItem onClick={() => changeLanguage("pl")}>Polski</MenuItem>
         </MenuList>
       </Menu>
     </Box>
