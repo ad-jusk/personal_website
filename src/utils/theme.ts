@@ -16,7 +16,7 @@ const components = {
         textDecoration: "underline",
         fontSize: 24,
         textUnderlineOffset: 9,
-        textDecorationColor: "#525252",
+        textDecorationColor: "grassTeal",
         textDecorationThickness: 4,
         marginTop: 4,
         marginBottom: 4,
