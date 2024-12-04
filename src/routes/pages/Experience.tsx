@@ -1,15 +1,15 @@
 import { Container } from "@chakra-ui/react";
 import { Page } from "@components/Page";
-import { Section } from "@components/Section";
+import { TextSection } from "@components/section/TextSection";
 import { ReactElement } from "react";
 
 const Experience = (): ReactElement => {
   return (
     <Page animationDuration={0}>
       <Container maxW={{ base: "60ch", md: "80ch" }}>
-        <Section
+        <TextSection
           headerTranslationKey="section.headers.aboutMe"
-          paragraphTranslationKey="section.paragraphs.lorem"
+          paragraphTranslationKeys={["section.paragraphs.lorem"]}
         />
       </Container>
     </Page>

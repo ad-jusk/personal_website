@@ -34,7 +34,7 @@ export const Page = ({ animationDuration = 1, children }: PageProps): ReactEleme
     exit: pageVariants.exit,
   };
   return (
-    <MotionBox variants={variants} initial="hidden" animate="visible" exit="exit">
+    <MotionBox py={8} variants={variants} initial="hidden" animate="visible" exit="exit">
       {children}
     </MotionBox>
   );

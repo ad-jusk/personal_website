@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import { Box, Container, Flex, Heading, useColorModeValue } from "@chakra-ui/react";
 import { Page } from "@components/Page";
-import { Section } from "@components/Section";
+import { TextSection } from "@components/section/TextSection";
 
 const Home = (): ReactElement => {
   return (
@@ -35,9 +35,9 @@ const Home = (): ReactElement => {
             />
           </Box>
         </Box>
-        <Section
+        <TextSection
           headerTranslationKey="section.headers.aboutMe"
-          paragraphTranslationKey="section.paragraphs.lorem"
+          paragraphTranslationKeys={["section.paragraphs.lorem"]}
         />
       </Container>
     </Page>

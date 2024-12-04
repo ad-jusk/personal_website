@@ -4,6 +4,7 @@ const Paragraph = styled.p`
   hyphens: auto;
   text-align: justify;
   text-indent: 1em;
+  margin-bottom: 1em;
 `;
 
 export default Paragraph;

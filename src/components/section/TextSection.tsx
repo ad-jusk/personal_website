@@ -1,8 +1,8 @@
 import { Heading } from "@chakra-ui/react";
 import { MotionBox } from "@utils/motion";
-import { ReactElement, ReactNode } from "react";
+import { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
-import Paragraph from "./Paragraph";
+import Paragraph from "../Paragraph";
 
 const sectionVariants = {
   hidden: {
@@ -20,28 +20,18 @@ const sectionVariants = {
 
 type SectionProps = {
   headerTranslationKey: string;
-  paragraphTranslationKey: string;
-  childrenBeforeParagraph?: boolean;
-  children?: ReactNode;
+  paragraphTranslationKeys: string[];
 };
 
-export const Section = (props: SectionProps): ReactElement => {
+export const TextSection = (props: SectionProps): ReactElement => {
   const { t } = useTranslation();
 
   return (
     <MotionBox variants={sectionVariants}>
       <Heading variant="sectionTitle">{t(props.headerTranslationKey)}</Heading>
-      {props.childrenBeforeParagraph ? (
-        <>
-          {props.children}
-          <Paragraph>{t(props.paragraphTranslationKey)}</Paragraph>
-        </>
-      ) : (
-        <>
-          <Paragraph>{t(props.paragraphTranslationKey)}</Paragraph>
-          {props.children}
-        </>
-      )}
+      {props.paragraphTranslationKeys.map((key) => (
+        <Paragraph key={key}>{t(key)}</Paragraph>
+      ))}
     </MotionBox>
   );
 };
