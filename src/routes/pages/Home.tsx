@@ -2,6 +2,8 @@ import { ReactElement } from "react";
 import { Box, Container, Flex, Heading, useColorModeValue } from "@chakra-ui/react";
 import { Page } from "@components/Page";
 import { TextSection } from "@components/section/TextSection";
+import { CustomSection } from "@components/section/CustomSection";
+import { Timeline } from "@components/Timeline";
 
 const Home = (): ReactElement => {
   return (
@@ -39,6 +41,7 @@ const Home = (): ReactElement => {
           headerTranslationKey="section.headers.aboutMe"
           paragraphTranslationKeys={["section.paragraphs.lorem"]}
         />
+        <CustomSection headerTranslationKey="section.headers.education" children={<Timeline />} />
       </Container>
     </Page>
   );
