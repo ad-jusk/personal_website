@@ -4,6 +4,7 @@
   "projects": "Projekty",
   "skills": "Umiejętności",
   "contact": "Kontakt",
+  "TUL": "Politechnika Łódzka",
 
   "section": {
     "headers": {
@@ -11,6 +12,7 @@
       "education": "Edukacja"
     },
     "paragraphs": {
+      "loremMin": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum risus urna, vel dictum nisi porta non.",
       "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum risus urna, vel dictum nisi porta non. Sed vulputate felis ac sapien pharetra ornare. Praesent tincidunt est nec ex faucibus, rhoncus pharetra tellus lacinia. Donec fringilla urna nisi. Quisque ultricies hendrerit viverra. Maecenas volutpat semper erat, lacinia scelerisque tortor. Morbi consequat mauris lacus, at sollicitudin nunc fringilla a. Nulla non scelerisque dui, eget efficitur dolor. Proin tempus malesuada urna, sit amet pharetra tellus feugiat in. Quisque imperdiet, justo at aliquet tempor, odio nibh vehicula lacus, vel viverra est lectus sed ante."
     }
   }

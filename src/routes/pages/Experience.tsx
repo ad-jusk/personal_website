@@ -8,7 +8,7 @@ const Experience = (): ReactElement => {
     <Page animationDuration={0}>
       <Container maxW={{ base: "60ch", md: "80ch" }}>
         <TextSection
-          headerTranslationKey="section.headers.aboutMe"
+          headerTranslationKey="experience"
           paragraphTranslationKeys={["section.paragraphs.lorem"]}
         />
       </Container>
