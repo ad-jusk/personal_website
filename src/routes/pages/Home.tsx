@@ -3,7 +3,7 @@ import { Box, Container, Flex, Heading, useColorModeValue } from "@chakra-ui/rea
 import { Page } from "@components/Page";
 import { TextSection } from "@components/section/TextSection";
 import { CustomSection } from "@components/section/CustomSection";
-import { EducationTimeline } from "@components/EducationTimeline";
+import { AnimatedAxis } from "@components/AnimatedAxis";
 
 const Home = (): ReactElement => {
   return (
@@ -43,7 +43,7 @@ const Home = (): ReactElement => {
         />
         <CustomSection
           headerTranslationKey="section.headers.education"
-          children={<EducationTimeline />}
+          children={<AnimatedAxis />}
         />
       </Container>
     </Page>
