@@ -3,7 +3,7 @@ import { Box, Container, Flex, Heading, useColorModeValue } from "@chakra-ui/rea
 import { Page } from "@components/Page";
 import { TextSection } from "@components/section/TextSection";
 import { CustomSection } from "@components/section/CustomSection";
-import { AnimatedAxis } from "@components/AnimatedAxis";
+import { AnimatedAxis } from "@components/EducationAxis";
 
 const Home = (): ReactElement => {
   return (

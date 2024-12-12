@@ -21,8 +21,8 @@ export const AnimatedAxis = (): ReactElement => {
   const viewBoxSize = `0 0 ${viewBoxWidth} ${viewBoxHeight}`;
   const svgContainerRef = useRef(null);
   const svgContainerDimensions = useSize(svgContainerRef);
-  const scaleX = (svgContainerDimensions?.width || 1) / 600;
-  const scaleY = (svgContainerDimensions?.height || 1) / 300;
+  const scaleX = (svgContainerDimensions?.width || 1) / viewBoxWidth;
+  const scaleY = (svgContainerDimensions?.height || 1) / viewBoxHeight;
 
   return (
     <Box>
@@ -31,7 +31,7 @@ export const AnimatedAxis = (): ReactElement => {
           viewBox={viewBoxSize}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: "all" }}
         >
           <motion.polyline
             fill="none"
@@ -40,7 +40,7 @@ export const AnimatedAxis = (): ReactElement => {
             stroke="#88ccca"
             points="80,300 80,200 200,50 300,50"
             variants={draw}
-            custom={0.5}
+            custom={0.3}
           />
           <motion.polyline
             fill="none"
@@ -49,7 +49,7 @@ export const AnimatedAxis = (): ReactElement => {
             stroke="#88ccca"
             points="200,300 200,250 250,190, 300,190"
             variants={draw}
-            custom={0.5}
+            custom={0.3}
           />
         </motion.svg>
         <Flex
@@ -68,13 +68,13 @@ export const AnimatedAxis = (): ReactElement => {
           borderWidth={2}
           borderRadius="md"
         >
-          <Text fontWeight="bold" fontSize={{ base: "x-small", md: "sm" }}>
+          <Text fontWeight="bold" fontSize="sm" lineHeight={1}>
             Bachelor of Computer Science
           </Text>
           <Text fontSize={{ base: "x-small", md: "sm" }} fontStyle="italic">
             Oct 2020 - Feb 2024
           </Text>
-          <Tag justifyContent="center" size={"sm"}>
+          <Tag width="fit-content" size="sm">
             Lodz University of Technology
           </Tag>
         </Flex>
@@ -94,13 +94,13 @@ export const AnimatedAxis = (): ReactElement => {
           borderWidth={2}
           borderRadius="md"
         >
-          <Text fontWeight="bold" fontSize={{ base: "x-small", md: "sm" }}>
+          <Text fontWeight="bold" fontSize="sm" lineHeight={1}>
             Master of Applied Computer Science
           </Text>
           <Text fontSize={{ base: "x-small", md: "sm" }} fontStyle="italic">
             Mar 2024 - Present
           </Text>
-          <Tag justifyContent="center" size={"sm"}>
+          <Tag width="fit-content" size="sm">
             Lodz University of Technology
           </Tag>
         </Flex>
@@ -113,7 +113,7 @@ export const AnimatedAxis = (): ReactElement => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <motion.line
+          <line
             x1="5%"
             y1="15"
             x2="95%"
@@ -121,10 +121,8 @@ export const AnimatedAxis = (): ReactElement => {
             stroke="#88ccca"
             strokeWidth={4}
             strokeLinecap="round"
-            variants={draw}
-            custom={0.5}
           />
-          <motion.polygon
+          <polygon
             strokeLinejoin="round"
             fill="#88ccca"
             strokeWidth={4}
