@@ -6,6 +6,11 @@ const styles = {
     body: {
       bg: mode("#fefefe", "#3a2e39")(props),
     },
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    "::-webkit-scrollbar": {
+      width: "0px",
+      background: "transparent",
+    },
   }),
 };
 

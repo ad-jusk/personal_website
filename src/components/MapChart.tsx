@@ -10,11 +10,11 @@ const MapChart = (): ReactElement => {
       projection="geoAzimuthalEqualArea"
       projectionConfig={{
         rotate: [-10.0, -52.0, 0],
-        center: [-5, -3],
-        scale: 1100,
+        center: [-1, -3],
+        scale: 1200,
       }}
     >
-      <Geographies geography="/features.json" fill="#88ccca" stroke={strokeColor} strokeWidth={0.5}>
+      <Geographies geography="/map.json" fill="#88ccca" stroke={strokeColor} strokeWidth={0.5}>
         {({ geographies }) =>
           geographies.map((geo) => <Geography key={geo.rsmKey} geography={geo} />)
         }

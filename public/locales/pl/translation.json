@@ -5,11 +5,13 @@
   "skills": "Umiejętności",
   "contact": "Kontakt",
   "TUL": "Politechnika Łódzka",
+  "copyright": "Adam Juśkiewicz. Wszelkie prawa zastrzeżone.",
 
   "section": {
     "headers": {
       "aboutMe": "O mnie",
-      "education": "Edukacja"
+      "education": "Wykształcenie",
+      "socials": "Znajdziesz mnie też tutaj:"
     },
     "paragraphs": {
       "loremMin": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum risus urna, vel dictum nisi porta non.",

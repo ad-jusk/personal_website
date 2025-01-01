@@ -5,11 +5,13 @@
   "skills": "Skills",
   "contact": "Contact",
   "TUL": "Technical University of Lodz",
+  "copyright": "Adam Juśkiewicz. All Rights Reserved.",
 
   "section": {
     "headers": {
       "aboutMe": "About me",
-      "education": "Education"
+      "education": "Education",
+      "socials": "You can also find me here:"
     },
     "paragraphs": {
       "loremMin": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum risus urna, vel dictum nisi porta non.",

@@ -36,7 +36,7 @@ export const Page = ({ animationDuration = 1, children }: PageProps): ReactEleme
   };
   return (
     <MotionBox py={8} variants={variants} initial="hidden" animate="visible" exit="exit">
-      <Container maxW={{ base: "60ch", md: "80ch" }}>{children}</Container>
+      <Container maxW={{ base: "60ch", md: "90ch" }}>{children}</Container>
     </MotionBox>
   );
 };
