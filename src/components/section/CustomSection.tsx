@@ -1,7 +1,7 @@
 import { Heading } from "@chakra-ui/react";
 import { MotionBox } from "@utils/motion";
+import { useTranslationContext } from "@utils/translationContext";
 import { ReactElement, ReactNode } from "react";
-import { useTranslation } from "react-i18next";
 
 const sectionVariants = {
   hidden: {
@@ -23,7 +23,7 @@ type SectionProps = {
 };
 
 export const CustomSection = ({ headerTranslationKey, children }: SectionProps): ReactElement => {
-  const { t } = useTranslation();
+  const { t } = useTranslationContext();
 
   return (
     <MotionBox variants={sectionVariants}>

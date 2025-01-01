@@ -1,12 +1,12 @@
 import { Box, IconButton, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
+import { useTranslationContext } from "@utils/translationContext";
 import { ReactElement } from "react";
-import { useTranslation } from "react-i18next";
 import { IoLanguage } from "react-icons/io5";
 
 type SupportedLanguage = "en" | "pl";
 
 export const LanguageToggleButton = (): ReactElement => {
-  const { i18n } = useTranslation();
+  const { i18n } = useTranslationContext();
 
   const changeLanguage = (lng: SupportedLanguage): void => {
     i18n.changeLanguage(lng);

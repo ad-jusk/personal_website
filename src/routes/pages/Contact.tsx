@@ -3,21 +3,23 @@ import MapChart from "@components/MapChart";
 import { Page } from "@components/Page";
 import { CustomSection } from "@components/section/CustomSection";
 import { Socials } from "@components/Socials";
+import { useTranslationContext } from "@utils/translationContext";
 import { ReactElement } from "react";
 
 const ContactForm = (): ReactElement => {
+  const { t } = useTranslationContext();
   return (
     <Flex direction="column" rowGap={2} w={{ base: "70%", md: "60%" }}>
       <FormControl isRequired>
-        <FormLabel>Name</FormLabel>
+        <FormLabel>{t("form.name")}</FormLabel>
         <Input type="text" _hover={{}} borderColor="grassTeal" />
       </FormControl>
       <FormControl isRequired>
-        <FormLabel>Email</FormLabel>
+        <FormLabel>{t("form.email")}</FormLabel>
         <Input type="email" _hover={{}} borderColor="grassTeal" />
       </FormControl>
       <FormControl isRequired>
-        <FormLabel>Your message</FormLabel>
+        <FormLabel>{t("form.message")}</FormLabel>
         <Textarea
           size="xl"
           minH="200px"

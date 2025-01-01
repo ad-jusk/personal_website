@@ -1,10 +1,11 @@
 import { useColorModeValue } from "@chakra-ui/react";
+import { useTranslationContext } from "@utils/translationContext";
 import { ReactElement } from "react";
 import { ComposableMap, Geographies, Geography, Annotation } from "react-simple-maps";
 
 const MapChart = (): ReactElement => {
   const strokeColor = useColorModeValue("#fefefe", "#3a2e39");
-
+  const { t } = useTranslationContext();
   return (
     <ComposableMap
       projection="geoAzimuthalEqualArea"
@@ -37,7 +38,7 @@ const MapChart = (): ReactElement => {
           alignmentBaseline="middle"
           fill="#F53"
         >
-          {"I live here!"}
+          {t("section.decor.iLiveHere")}
         </text>
       </Annotation>
     </ComposableMap>
