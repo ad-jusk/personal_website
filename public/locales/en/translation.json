@@ -19,6 +19,22 @@
     },
     "decor": {
       "iLiveHere": "I live here!"
+    },
+    "skills": {
+      "beginner": "Beginner",
+      "expert": "Expert",
+      "programming": "Programming",
+      "tools": "Tools",
+      "gamedev": "Gamedev",
+      "vsCode": "My favorite code editor for most programming languages :)",
+      "intellij": "I use it all the time for Java coding.",
+      "git": "Pretty much mandatory to know.",
+      "visualStudio": "Mostly using it with Unity for gamedev. But I have implemented some C++ apps in it and it works great!",
+      "linux": "I can work in linux environment without a problem.",
+      "cmake": "I know how to setup and configure a cmake project and that's about it :)",
+      "docker": "My computer hates docker so I hardly ever use it. But I have some experience from work.",
+      "godot": "I know Godot pretty well, though I have only made 2D games with it.",
+      "currentlyLearning": "Currently learning :)"
     }
   },
 

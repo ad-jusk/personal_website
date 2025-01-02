@@ -34,6 +34,17 @@ const components = {
       textUnderlineOffset: 3,
     }),
   },
+  Tag: {
+    sizes: {
+      xs: {
+        container: {
+          fontSize: "8px",
+          paddingX: "1",
+          paddingY: "1",
+        },
+      },
+    },
+  },
 };
 
 const fonts = {
