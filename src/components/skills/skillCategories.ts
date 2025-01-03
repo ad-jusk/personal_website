@@ -26,7 +26,17 @@ export const skillCategories: SkillCategory[] = [
         knowledgePercentage: 90,
         skillColor: "yellow",
         informationType: "tags",
-        tags: ["React", "Chakra UI", "d3", "three.js", "axios", "jquery", "RxJs", "npm"],
+        tags: [
+          "React",
+          "Chakra UI",
+          "framer-motion",
+          "d3",
+          "three.js",
+          "axios",
+          "jquery",
+          "RxJs",
+          "npm",
+        ],
       },
       {
         name: "Python",

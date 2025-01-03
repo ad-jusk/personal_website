@@ -54,6 +54,7 @@
   "form": {
     "email": "Email",
     "name": "Imię",
-    "message": "Twoja wiadomość"
+    "message": "Twoja wiadomość",
+    "send": "Wyślij"
   }
 }

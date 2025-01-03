@@ -31,7 +31,7 @@ const ContactForm = (): ReactElement => {
         />
       </FormControl>
       <Button mt={3} mx="auto" bg="grassTeal" _hover={{}}>
-        Send!
+        {`${t("form.send")}!`}
       </Button>
     </Flex>
   );
