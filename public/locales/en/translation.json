@@ -20,6 +20,19 @@
     "decor": {
       "iLiveHere": "I live here!"
     },
+    "experience": {
+      "at": "at",
+      "workingOn": "working on",
+      "present": "present",
+      "medicalImageViewer": "Medical image viewer",
+      "myTasks": "My tasks",
+      "bugFixing": "Bug fixing",
+      "codeRefactoring": "Code refactoring",
+      "documentationWriting": "Documentation writing",
+      "testing": "Integration and unit testing",
+      "ux": "UX/UI design for new features",
+      "newFeatures": "Implementing new medical features"
+    },
     "skills": {
       "beginner": "Beginner",
       "expert": "Expert",

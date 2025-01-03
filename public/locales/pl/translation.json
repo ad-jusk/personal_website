@@ -20,6 +20,19 @@
     "decor": {
       "iLiveHere": "Mieszkam tutaj!"
     },
+    "experience": {
+      "at": "w",
+      "workingOn": "pracowałem nad",
+      "present": "Obecnie",
+      "medicalImageViewer": "Przeglądarką medyczną",
+      "myTasks": "Moje zadania",
+      "bugFixing": "Bugfixing",
+      "codeRefactoring": "Refactor kodu",
+      "documentationWriting": "Pisanie dokumentacji",
+      "testing": "Pisanie testów do aplikacji",
+      "ux": "Design nowych funkcjonalności",
+      "newFeatures": "Implementowanie nowych funkcji"
+    },
     "skills": {
       "beginner": "Początkujący",
       "expert": "Ekspert",
