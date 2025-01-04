@@ -12,31 +12,23 @@ export const EducationGraph = (): ReactElement => {
         <g>
           <chakra.circle cx="20" cy="80" r="18" fill="grassTeal" />
           <chakra.polyline
-            points="20,80 100,20 220,20"
+            points="20,80 80,20 220,20"
             stroke="grassTeal"
             strokeWidth={5}
             fill="none"
           />
           <FaGraduationCap size="25px" x="8.5" y="67.5" />
-          <chakra.text x="100" dx="10" y="10" fill="grassTeal" fontSize="10" fontWeight="bold">
+          <chakra.text x="80" dx="5" y="10" fill="grassTeal" fontSize="10" fontWeight="bold">
             {`03.2024 - ${t("section.experience.present")}`}
           </chakra.text>
-          <chakra.text
-            x="100"
-            dx="10"
-            y="30"
-            dy="5"
-            fill="grassTeal"
-            fontSize="8"
-            fontWeight="bold"
-          >
+          <chakra.text x="80" dx="5" y="30" dy="5" fill="grassTeal" fontSize="10" fontWeight="bold">
             {t("TUL")}
           </chakra.text>
           <chakra.text fill={useColorModeValue("black", "white")}>
-            <chakra.tspan x="220" dx="10" y="10" dy="5" fontSize={10} fontWeight="bold">
+            <chakra.tspan x="220" dx="10" y="10" dy="5" fontSize="10" fontWeight="bold">
               {t("section.education.masterDegree")}
             </chakra.tspan>
-            <chakra.tspan x="220" dx="10" y="10" dy="20" fontSize={10}>
+            <chakra.tspan x="220" dx="10" y="10" dy="20" fontSize="10">
               {`Spec: ${t("section.education.masterSpec")}`}
             </chakra.tspan>
           </chakra.text>
@@ -44,31 +36,31 @@ export const EducationGraph = (): ReactElement => {
         <g>
           <chakra.circle cx="20" cy="160" r="18" fill="grassTeal" />
           <chakra.polyline
-            points="20,160 100,100 220,100"
+            points="20,160 80,100 220,100"
             stroke="grassTeal"
             strokeWidth={5}
             fill="none"
           />
           <FaGraduationCap size="25px" x="8.5" y="147.5" />
-          <chakra.text x="100" dx="10" y="90" fill="grassTeal" fontSize="10" fontWeight="bold">
+          <chakra.text x="80" dx="5" y="90" fill="grassTeal" fontSize="10" fontWeight="bold">
             10.2020 - 03.2024
           </chakra.text>
           <chakra.text
-            x="100"
-            dx="10"
+            x="80"
+            dx="5"
             y="110"
             dy="5"
             fill="grassTeal"
-            fontSize="8"
+            fontSize="10"
             fontWeight="bold"
           >
             {t("TUL")}
           </chakra.text>
           <chakra.text fill={useColorModeValue("black", "white")}>
-            <chakra.tspan x="220" dx="10" y="90" dy="5" fontSize={10} fontWeight="bold">
+            <chakra.tspan x="220" dx="10" y="90" dy="5" fontSize="10" fontWeight="bold">
               {t("section.education.bachelorDegree")}
             </chakra.tspan>
-            <chakra.tspan x="220" dx="10" y="90" dy="20" fontSize={10}>
+            <chakra.tspan x="220" dx="10" y="90" dy="20" fontSize="10">
               {`Spec: ${t("section.education.bachelorSpec")}`}
             </chakra.tspan>
           </chakra.text>

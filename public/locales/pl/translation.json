@@ -11,7 +11,8 @@
     "headers": {
       "aboutMe": "O mnie",
       "education": "Wykształcenie",
-      "socials": "Znajdziesz mnie też tutaj:"
+      "socials": "Znajdziesz mnie też tutaj:",
+      "languages": "Języki"
     },
     "paragraphs": {
       "aboutMe": "Cześć, jestem inżynierem oprogramowania i studentem informatyki stosowanej mieszkającym w Polsce!",
@@ -20,6 +21,12 @@
     },
     "decor": {
       "iLiveHere": "Mieszkam tutaj!"
+    },
+    "languages": {
+      "spanish": "Hiszpański",
+      "polish": "Polski",
+      "english": "Angielski",
+      "native": "Natywny"
     },
     "education": {
       "masterDegree": "Magister informatyki stosowanej",

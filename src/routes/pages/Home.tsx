@@ -4,6 +4,7 @@ import { Page } from "@components/Page";
 import { TextSection } from "@components/section/TextSection";
 import { CustomSection } from "@components/section/CustomSection";
 import { EducationGraph } from "@components/EducationGraph";
+import { LanguagesGraph } from "@components/LanguagesGraph";
 
 const Home = (): ReactElement => {
   return (
@@ -45,6 +46,10 @@ const Home = (): ReactElement => {
         <CustomSection
           headerTranslationKey="section.headers.education"
           children={<EducationGraph />}
+        />
+        <CustomSection
+          headerTranslationKey="section.headers.languages"
+          children={<LanguagesGraph />}
         />
       </Flex>
     </Page>

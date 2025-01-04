@@ -11,7 +11,8 @@
     "headers": {
       "aboutMe": "About me",
       "education": "Education",
-      "socials": "You can also find me here:"
+      "socials": "You can also find me here:",
+      "languages": "Languages"
     },
     "paragraphs": {
       "aboutMe": "Hello, I'm a software developer and applied computer science student based in Poland!",
@@ -20,6 +21,12 @@
     },
     "decor": {
       "iLiveHere": "I live here!"
+    },
+    "languages": {
+      "spanish": "Spanish",
+      "polish": "Polish",
+      "english": "English",
+      "native": "Native"
     },
     "education": {
       "masterDegree": "Master of applied computer science",
