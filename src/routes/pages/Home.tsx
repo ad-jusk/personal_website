@@ -2,6 +2,8 @@ import { ReactElement } from "react";
 import { Box, Flex, Heading, useColorModeValue } from "@chakra-ui/react";
 import { Page } from "@components/Page";
 import { TextSection } from "@components/section/TextSection";
+import { CustomSection } from "@components/section/CustomSection";
+import { EducationGraph } from "@components/EducationGraph";
 
 const Home = (): ReactElement => {
   return (
@@ -16,6 +18,7 @@ const Home = (): ReactElement => {
             textAlign="center"
             maxW="fit-content"
             px={2}
+            py={1}
             zIndex={-1}
           >
             <p>Fullstack Software Developer</p>
@@ -31,13 +34,19 @@ const Home = (): ReactElement => {
             display="inline-block"
             borderRadius="full"
             overflow="hidden"
-          />
+          ></Box>
         </Box>
       </Box>
-      <TextSection
-        headerTranslationKey="section.headers.aboutMe"
-        paragraphTranslationKeys={["section.paragraphs.lorem"]}
-      />
+      <Flex direction="column" rowGap={10}>
+        <TextSection
+          headerTranslationKey="section.headers.aboutMe"
+          paragraphTranslationKeys={["section.paragraphs.aboutMe"]}
+        />
+        <CustomSection
+          headerTranslationKey="section.headers.education"
+          children={<EducationGraph />}
+        />
+      </Flex>
     </Page>
   );
 };

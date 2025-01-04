@@ -21,7 +21,7 @@ type Props = {
 export const SkillCategoryAccordion = ({ skillCategories }: Props): ReactElement => {
   const { t } = useTranslationContext();
   return (
-    <Stack mt="100px" gap={0}>
+    <Stack mt={10} gap={0}>
       {skillCategories.map((category) => (
         <Accordion
           allowToggle

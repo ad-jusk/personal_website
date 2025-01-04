@@ -14,16 +14,23 @@
       "socials": "You can also find me here:"
     },
     "paragraphs": {
+      "aboutMe": "Hello, I'm a software developer and applied computer science student based in Poland!",
       "loremMin": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum risus urna, vel dictum nisi porta non.",
       "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum risus urna, vel dictum nisi porta non. Sed vulputate felis ac sapien pharetra ornare. Praesent tincidunt est nec ex faucibus, rhoncus pharetra tellus lacinia. Donec fringilla urna nisi. Quisque ultricies hendrerit viverra. Maecenas volutpat semper erat, lacinia scelerisque tortor. Morbi consequat mauris lacus, at sollicitudin nunc fringilla a. Nulla non scelerisque dui, eget efficitur dolor. Proin tempus malesuada urna, sit amet pharetra tellus feugiat in. Quisque imperdiet, justo at aliquet tempor, odio nibh vehicula lacus, vel viverra est lectus sed ante."
     },
     "decor": {
       "iLiveHere": "I live here!"
     },
+    "education": {
+      "masterDegree": "Master of applied computer science",
+      "masterSpec": "Games and interactive systems",
+      "bachelorDegree": "Bachelor of computer science",
+      "bachelorSpec": "Web technologies"
+    },
     "experience": {
       "at": "at",
       "workingOn": "working on",
-      "present": "present",
+      "present": "Present",
       "medicalImageViewer": "Medical image viewer",
       "myTasks": "My tasks",
       "bugFixing": "Bugfixing",
