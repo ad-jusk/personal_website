@@ -12,7 +12,8 @@
       "aboutMe": "About me",
       "education": "Education",
       "socials": "You can also find me here:",
-      "languages": "Languages"
+      "languages": "Languages",
+      "hobbies": "Hobbies"
     },
     "paragraphs": {
       "aboutMe": "Hello, I'm a software developer and applied computer science student based in Poland!",
@@ -21,6 +22,11 @@
     },
     "decor": {
       "iLiveHere": "I live here!"
+    },
+    "hobbies": {
+      "games": "I love playing and making games!",
+      "gym": "I believe physical and mental development are equally important.",
+      "music": "My favorite music genres are rock and pop."
     },
     "languages": {
       "spanish": "Spanish",

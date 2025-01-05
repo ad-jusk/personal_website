@@ -12,7 +12,8 @@
       "aboutMe": "O mnie",
       "education": "Wykształcenie",
       "socials": "Znajdziesz mnie też tutaj:",
-      "languages": "Języki"
+      "languages": "Języki",
+      "hobbies": "Zainteresowania"
     },
     "paragraphs": {
       "aboutMe": "Cześć, jestem inżynierem oprogramowania i studentem informatyki stosowanej mieszkającym w Polsce!",
@@ -22,11 +23,16 @@
     "decor": {
       "iLiveHere": "Mieszkam tutaj!"
     },
+    "hobbies": {
+      "games": "Uwielbiam grać i tworzyć gry!",
+      "gym": "Uważam, że rozwój fizyczny i mentalny są tak samo ważne.",
+      "music": "Moje ulubione gatunki muzyczne to rock i pop."
+    },
     "languages": {
       "spanish": "Hiszpański",
       "polish": "Polski",
       "english": "Angielski",
-      "native": "Natywny"
+      "native": "Ojczysty"
     },
     "education": {
       "masterDegree": "Magister informatyki stosowanej",
