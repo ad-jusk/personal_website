@@ -15,7 +15,7 @@ export const Socials = ({
   iconsDirection = "horizontal",
   iconsPadding = 10,
   iconsJustify = "space-between",
-  iconsSizes = ["40px", "60px", "100px"],
+  iconsSizes = ["60px", "80px", "100px"],
 }: Props): ReactElement => {
   const socials = [
     {
@@ -44,7 +44,7 @@ export const Socials = ({
             boxSize={iconsSizes}
             fill="grassTeal"
             title={social.title}
-            _hover={{ transform: "scale(1.2)", transition: "transform 0.3s" }}
+            _hover={{ transform: "scale(1.1)", transition: "transform 0.3s" }}
             transition="ease-in-out 0.3s"
           />
         </Link>

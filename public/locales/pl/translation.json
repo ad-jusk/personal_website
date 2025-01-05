@@ -11,7 +11,7 @@
     "headers": {
       "aboutMe": "O mnie",
       "education": "Wykształcenie",
-      "socials": "Znajdziesz mnie też tutaj:",
+      "socials": "Znajdziesz mnie tutaj:",
       "languages": "Języki",
       "hobbies": "Zainteresowania"
     },
@@ -25,7 +25,7 @@
     },
     "hobbies": {
       "games": "Uwielbiam grać i tworzyć gry!",
-      "gym": "Uważam, że rozwój fizyczny i mentalny są tak samo ważne.",
+      "gym": "Uważam, że rozwój fizyczny i mentalny powinny iść w parze",
       "music": "Moje ulubione gatunki muzyczne to rock i pop."
     },
     "languages": {
