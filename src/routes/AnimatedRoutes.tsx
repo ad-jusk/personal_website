@@ -1,3 +1,4 @@
+import { Loading } from "@components/Loading";
 import { AnimatePresence } from "framer-motion";
 import { lazy, ReactElement, Suspense } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
@@ -17,7 +18,7 @@ export const AnimatedRoutes = (): ReactElement => {
         <Route
           path="/"
           element={
-            <Suspense fallback={null}>
+            <Suspense fallback={<Loading height="100vh" />}>
               <Home />
             </Suspense>
           }
@@ -25,7 +26,7 @@ export const AnimatedRoutes = (): ReactElement => {
         <Route
           path="/experience"
           element={
-            <Suspense fallback={null}>
+            <Suspense fallback={<Loading height="100vh" />}>
               <Experience />
             </Suspense>
           }
@@ -33,7 +34,7 @@ export const AnimatedRoutes = (): ReactElement => {
         <Route
           path="/projects"
           element={
-            <Suspense fallback={null}>
+            <Suspense fallback={<Loading height="100vh" />}>
               <Projects />
             </Suspense>
           }
@@ -41,7 +42,7 @@ export const AnimatedRoutes = (): ReactElement => {
         <Route
           path="/skills"
           element={
-            <Suspense fallback={null}>
+            <Suspense fallback={<Loading height="100vh" />}>
               <Skills />
             </Suspense>
           }
@@ -49,7 +50,7 @@ export const AnimatedRoutes = (): ReactElement => {
         <Route
           path="/contact"
           element={
-            <Suspense fallback={null}>
+            <Suspense fallback={<Loading height="100vh" />}>
               <Contact />
             </Suspense>
           }
