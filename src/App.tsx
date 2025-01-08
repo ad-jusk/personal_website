@@ -2,15 +2,14 @@ import { ChakraProvider } from "@chakra-ui/react";
 import chakraTheme from "@utils/theme";
 import { Router } from "@routes/Router";
 import { ReactElement } from "react";
-import { I18nextProvider } from "react-i18next";
-import i18n from "@i18n";
+import { TranslationProvider } from "@utils/translationContext";
 
 export const App = (): ReactElement => {
   return (
     <ChakraProvider theme={chakraTheme}>
-      <I18nextProvider i18n={i18n}>
+      <TranslationProvider>
         <Router />
-      </I18nextProvider>
+      </TranslationProvider>
     </ChakraProvider>
   );
 };

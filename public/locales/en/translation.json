@@ -5,15 +5,77 @@
   "skills": "Skills",
   "contact": "Contact",
   "TUL": "Technical University of Lodz",
+  "copyright": "Adam Juśkiewicz. All Rights Reserved.",
+  "loading": "Loading",
 
   "section": {
     "headers": {
       "aboutMe": "About me",
-      "education": "Education"
+      "education": "Education",
+      "socials": "You can also find me here:",
+      "languages": "Languages",
+      "hobbies": "Hobbies"
     },
     "paragraphs": {
+      "aboutMe": "Hello, I'm a software developer and applied computer science student based in Poland!",
       "loremMin": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum risus urna, vel dictum nisi porta non.",
       "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum risus urna, vel dictum nisi porta non. Sed vulputate felis ac sapien pharetra ornare. Praesent tincidunt est nec ex faucibus, rhoncus pharetra tellus lacinia. Donec fringilla urna nisi. Quisque ultricies hendrerit viverra. Maecenas volutpat semper erat, lacinia scelerisque tortor. Morbi consequat mauris lacus, at sollicitudin nunc fringilla a. Nulla non scelerisque dui, eget efficitur dolor. Proin tempus malesuada urna, sit amet pharetra tellus feugiat in. Quisque imperdiet, justo at aliquet tempor, odio nibh vehicula lacus, vel viverra est lectus sed ante."
+    },
+    "decor": {
+      "iLiveHere": "I live here!"
+    },
+    "hobbies": {
+      "games": "I love playing and making games!",
+      "gym": "I believe physical and mental development are equally important.",
+      "music": "My favorite music genres are rock and pop."
+    },
+    "languages": {
+      "spanish": "Spanish",
+      "polish": "Polish",
+      "english": "English",
+      "native": "Native"
+    },
+    "education": {
+      "masterDegree": "Master of applied computer science",
+      "masterSpec": "Games and interactive systems",
+      "bachelorDegree": "Bachelor of computer science",
+      "bachelorSpec": "Web technologies"
+    },
+    "experience": {
+      "at": "at",
+      "workingOn": "working on",
+      "present": "Present",
+      "medicalImageViewer": "Medical image viewer",
+      "myTasks": "My tasks",
+      "bugFixing": "Bugfixing",
+      "codeRefactoring": "Code refactoring",
+      "documentationWriting": "Documentation writing",
+      "testing": "Integration and unit testing",
+      "ux": "UX/UI design for new features",
+      "newFeatures": "Implementing new medical features"
+    },
+    "skills": {
+      "beginner": "Beginner",
+      "expert": "Expert",
+      "programming": "Programming",
+      "tools": "Tools",
+      "gamedev": "Gamedev",
+      "vsCode": "My favorite code editor for most programming languages :)",
+      "intellij": "I use it all the time for Java coding.",
+      "git": "Pretty much mandatory to know.",
+      "visualStudio": "Mostly using it with Unity for gamedev. But I have implemented some C++ apps in it and it works great!",
+      "linux": "I can work in linux environment without a problem.",
+      "cmake": "I know how to setup and configure a cmake project and that's about it :)",
+      "docker": "My computer hates docker so I hardly ever use it. But I have some experience from work.",
+      "godot": "I know Godot pretty well, though I have only made 2D games with it.",
+      "currentlyLearning": "Currently learning :)"
     }
+  },
+
+  "form": {
+    "email": "Email",
+    "name": "Name",
+    "message": "Your message",
+    "send": "Send"
   }
 }

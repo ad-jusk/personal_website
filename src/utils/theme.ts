@@ -6,6 +6,11 @@ const styles = {
     body: {
       bg: mode("#fefefe", "#3a2e39")(props),
     },
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    "::-webkit-scrollbar": {
+      width: "0px",
+      background: "transparent",
+    },
   }),
 };
 
@@ -18,8 +23,8 @@ const components = {
         textUnderlineOffset: 9,
         textDecorationColor: "grassTeal",
         textDecorationThickness: 4,
-        marginTop: 5,
-        marginBottom: 5,
+        marginTop: 6,
+        marginBottom: 6,
       },
     },
   },
@@ -28,6 +33,17 @@ const components = {
       color: mode("#3d7aed", "#ff63c3")(props),
       textUnderlineOffset: 3,
     }),
+  },
+  Tag: {
+    sizes: {
+      xs: {
+        container: {
+          fontSize: "8px",
+          paddingX: "1",
+          paddingY: "1",
+        },
+      },
+    },
   },
 };
 

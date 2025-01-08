@@ -1,3 +1,4 @@
+import { Container } from "@chakra-ui/react";
 import { MotionBox } from "@utils/motion";
 import { ReactNode, ReactElement } from "react";
 
@@ -35,7 +36,7 @@ export const Page = ({ animationDuration = 1, children }: PageProps): ReactEleme
   };
   return (
     <MotionBox py={8} variants={variants} initial="hidden" animate="visible" exit="exit">
-      {children}
+      <Container maxW={{ base: "60ch", md: "90ch" }}>{children}</Container>
     </MotionBox>
   );
 };

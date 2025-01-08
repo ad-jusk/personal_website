@@ -18,7 +18,7 @@ import ThemeToggleButton from "./ThemeToggleButton";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import { LanguageToggleButton } from "./LanguageToggleButton";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { useTranslation } from "react-i18next";
+import { useTranslationContext } from "@utils/translationContext";
 
 type LinkProps = {
   href: string;
@@ -27,7 +27,7 @@ type LinkProps = {
 
 const NavbarLink = ({ href, translationKey }: LinkProps): ReactElement => {
   const location = useLocation();
-  const { t } = useTranslation();
+  const { t } = useTranslationContext();
   const isActive = location.pathname === href;
   const inactiveColor = useColorModeValue("gray.800", "whiteAlpha.900");
 
@@ -46,7 +46,7 @@ const NavbarLink = ({ href, translationKey }: LinkProps): ReactElement => {
 };
 
 const MenuLink = ({ href, translationKey }: LinkProps): ReactElement => {
-  const { t } = useTranslation();
+  const { t } = useTranslationContext();
 
   return (
     <MenuItem as={RouterLink} to={href}>
@@ -79,7 +79,7 @@ export const Navbar = (): ReactElement => {
           mt={{ base: 4, md: 0 }}
         >
           <NavbarLink href="/experience" translationKey="experience" />
-          <NavbarLink href="/projects" translationKey="projects" />
+          {/* <NavbarLink href="/projects" translationKey="projects" /> */}
           <NavbarLink href="/skills" translationKey="skills" />
           <NavbarLink href="/contact" translationKey="contact" />
         </Stack>
@@ -99,7 +99,7 @@ export const Navbar = (): ReactElement => {
               />
               <MenuList>
                 <MenuLink href="/experience" translationKey="experience" />
-                <MenuLink href="/projects" translationKey="projects" />
+                {/* <MenuLink href="/projects" translationKey="projects" /> */}
                 <MenuLink href="/skills" translationKey="skills" />
                 <MenuLink href="/contact" translationKey="contact" />
               </MenuList>

@@ -5,15 +5,77 @@
   "skills": "Umiejętności",
   "contact": "Kontakt",
   "TUL": "Politechnika Łódzka",
+  "copyright": "Adam Juśkiewicz. Wszelkie prawa zastrzeżone.",
+  "loading": "Ładowanie",
 
   "section": {
     "headers": {
       "aboutMe": "O mnie",
-      "education": "Edukacja"
+      "education": "Wykształcenie",
+      "socials": "Znajdziesz mnie tutaj:",
+      "languages": "Języki",
+      "hobbies": "Zainteresowania"
     },
     "paragraphs": {
+      "aboutMe": "Cześć, jestem inżynierem oprogramowania i studentem informatyki stosowanej mieszkającym w Polsce!",
       "loremMin": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum risus urna, vel dictum nisi porta non.",
       "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum risus urna, vel dictum nisi porta non. Sed vulputate felis ac sapien pharetra ornare. Praesent tincidunt est nec ex faucibus, rhoncus pharetra tellus lacinia. Donec fringilla urna nisi. Quisque ultricies hendrerit viverra. Maecenas volutpat semper erat, lacinia scelerisque tortor. Morbi consequat mauris lacus, at sollicitudin nunc fringilla a. Nulla non scelerisque dui, eget efficitur dolor. Proin tempus malesuada urna, sit amet pharetra tellus feugiat in. Quisque imperdiet, justo at aliquet tempor, odio nibh vehicula lacus, vel viverra est lectus sed ante."
+    },
+    "decor": {
+      "iLiveHere": "Mieszkam tutaj!"
+    },
+    "hobbies": {
+      "games": "Uwielbiam grać i tworzyć gry!",
+      "gym": "Uważam, że rozwój fizyczny i mentalny powinny iść w parze",
+      "music": "Moje ulubione gatunki muzyczne to rock i pop."
+    },
+    "languages": {
+      "spanish": "Hiszpański",
+      "polish": "Polski",
+      "english": "Angielski",
+      "native": "Ojczysty"
+    },
+    "education": {
+      "masterDegree": "Magister informatyki stosowanej",
+      "masterSpec": "Gry i systemy interaktywne",
+      "bachelorDegree": "Inżynier informatyki",
+      "bachelorSpec": "Technologie internetowe"
+    },
+    "experience": {
+      "at": "w",
+      "workingOn": "pracowałem nad",
+      "present": "Obecnie",
+      "medicalImageViewer": "Przeglądarką medyczną",
+      "myTasks": "Moje zadania",
+      "bugFixing": "Bugfixing",
+      "codeRefactoring": "Refactor kodu",
+      "documentationWriting": "Pisanie dokumentacji",
+      "testing": "Pisanie testów do aplikacji",
+      "ux": "Design nowych funkcjonalności",
+      "newFeatures": "Implementowanie nowych funkcji"
+    },
+    "skills": {
+      "beginner": "Początkujący",
+      "expert": "Ekspert",
+      "programming": "Programowanie",
+      "tools": "Narzędzia",
+      "gamedev": "Gamedev",
+      "vsCode": "Mój ulubiony edytor kodu dla większości języków programowania :)",
+      "intellij": "Używam go cały czas do programowania w Javie.",
+      "git": "Niezbędny w każdym projekcie.",
+      "visualStudio": "Głównie używam go z Unity do tworzenia gier. Ale zaimplementowałem w nim kilka aplikacji w C++ i działa świetnie!",
+      "linux": "Nie mam problemów z pracą z linuxem.",
+      "cmake": "Umiem skonfigurować projekt w cmake i to w zasadzie tyle :)",
+      "docker": "Mój komputer nie przepada za dockerem, więc rzadko go używam. Ale mam trochę doświadczenia z pracy.",
+      "godot": "Znam Godota całkiem dobrze, chociaż tworzyłem tylko gry 2D.",
+      "currentlyLearning": "Obecnie się uczę :)"
     }
+  },
+
+  "form": {
+    "email": "Email",
+    "name": "Imię",
+    "message": "Twoja wiadomość",
+    "send": "Wyślij"
   }
 }
