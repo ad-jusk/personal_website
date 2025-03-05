@@ -47,14 +47,14 @@ export const SkillCategoryAccordion = ({ skillCategories }: Props): ReactElement
                           {skill.name}
                         </Box>
                         <Flex align="center" columnGap={2} flexShrink={0}>
-                          <Tag size={{ base: "xs", md: "sm" }}>{t("section.skills.beginner")}</Tag>
+                          <Tag size={"sm"}>{t("section.skills.beginner")}</Tag>
                           <Progress
                             hasStripe
                             value={skill.knowledgePercentage}
                             width="20vw"
                             colorScheme={skill.skillColor}
                           />
-                          <Tag size={{ base: "xs", md: "sm" }}>{t("section.skills.expert")}</Tag>
+                          <Tag size={"sm"}>{t("section.skills.expert")}</Tag>
                         </Flex>
                       </Flex>
                       <AccordionIcon ml={1} />

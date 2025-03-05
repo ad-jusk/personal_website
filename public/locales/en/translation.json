@@ -17,7 +17,9 @@
       "hobbies": "Hobbies"
     },
     "paragraphs": {
-      "aboutMe": "Hello, I'm a software developer and applied computer science student based in Poland!",
+      "aboutMe": "Hello, I'm a software developer and applied computer science student based in Poland! I love learning new stuff and using acquired knowledge in practice - either for solo or group projects. I believe that code readability and clean architecture are crucial for implementing a scalable solution.",
+      "aboutMe2": "I consider myself to be well organised, responsible and meticulous. I am comfortable with demanding tasks that require planning and supervising their progress.",
+      "aboutMe3": "As for my professional life, I aim to become a more capable developer every day. I want to combine technical knowledge with soft skills to solve any task with ease!",
       "loremMin": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum risus urna, vel dictum nisi porta non.",
       "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum risus urna, vel dictum nisi porta non. Sed vulputate felis ac sapien pharetra ornare. Praesent tincidunt est nec ex faucibus, rhoncus pharetra tellus lacinia. Donec fringilla urna nisi. Quisque ultricies hendrerit viverra. Maecenas volutpat semper erat, lacinia scelerisque tortor. Morbi consequat mauris lacus, at sollicitudin nunc fringilla a. Nulla non scelerisque dui, eget efficitur dolor. Proin tempus malesuada urna, sit amet pharetra tellus feugiat in. Quisque imperdiet, justo at aliquet tempor, odio nibh vehicula lacus, vel viverra est lectus sed ante."
     },
@@ -48,7 +50,7 @@
       "medicalImageViewer": "Medical image viewer",
       "myTasks": "My tasks",
       "bugFixing": "Bugfixing",
-      "codeRefactoring": "Code refactoring",
+      "codeReviews": "Code reviews",
       "documentationWriting": "Documentation writing",
       "testing": "Integration and unit testing",
       "ux": "UX/UI design for new features",

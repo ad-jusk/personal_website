@@ -17,7 +17,9 @@
       "hobbies": "Zainteresowania"
     },
     "paragraphs": {
-      "aboutMe": "Cześć, jestem inżynierem oprogramowania i studentem informatyki stosowanej mieszkającym w Polsce!",
+      "aboutMe": "Cześć, jestem inżynierem oprogramowania i studentem informatyki stosowanej mieszkającym w Polsce! Uwielbiam naukę nowych rzeczy i wykorzystanie zdobytej wiedzy w praktyce - zarówno we własnych jak i grupowych projektach. Uważam, że czytelność kodu oraz czysta architektura jest niezbędna do zbudowania działającego rozwiązania.",
+      "aboutMe2": "Uważam się za osobę zorganizowaną, odpowiedzialną i skrupulatną. Lubię pracować nad skomplikowanymi zadaniami, które wymagają zaplanowania i nadzorowania postępów.",
+      "aboutMe3": "W życiu zawodowym, stawiam na codzienny rozwój umiejętności. Chcę łączyć wiedzę techniczną z umiejętnościami miękkimi, tak aby moja praca była jak najwydajniejsza.",
       "loremMin": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum risus urna, vel dictum nisi porta non.",
       "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum risus urna, vel dictum nisi porta non. Sed vulputate felis ac sapien pharetra ornare. Praesent tincidunt est nec ex faucibus, rhoncus pharetra tellus lacinia. Donec fringilla urna nisi. Quisque ultricies hendrerit viverra. Maecenas volutpat semper erat, lacinia scelerisque tortor. Morbi consequat mauris lacus, at sollicitudin nunc fringilla a. Nulla non scelerisque dui, eget efficitur dolor. Proin tempus malesuada urna, sit amet pharetra tellus feugiat in. Quisque imperdiet, justo at aliquet tempor, odio nibh vehicula lacus, vel viverra est lectus sed ante."
     },
@@ -48,7 +50,7 @@
       "medicalImageViewer": "Przeglądarką medyczną",
       "myTasks": "Moje zadania",
       "bugFixing": "Bugfixing",
-      "codeRefactoring": "Refactor kodu",
+      "codeReviews": "Code reviews",
       "documentationWriting": "Pisanie dokumentacji",
       "testing": "Pisanie testów do aplikacji",
       "ux": "Design nowych funkcjonalności",

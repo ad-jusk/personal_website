@@ -42,7 +42,11 @@ const Home = (): ReactElement => {
       <Flex direction="column" rowGap={10}>
         <TextSection
           headerTranslationKey="section.headers.aboutMe"
-          paragraphTranslationKeys={["section.paragraphs.aboutMe"]}
+          paragraphTranslationKeys={[
+            "section.paragraphs.aboutMe",
+            "section.paragraphs.aboutMe2",
+            "section.paragraphs.aboutMe3",
+          ]}
         />
         <CustomSection
           headerTranslationKey="section.headers.education"

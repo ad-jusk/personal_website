@@ -139,8 +139,8 @@ export const ExperienceGraph = (): ReactElement => {
         </g>
         <g transform={`translate(${viewBoxWidth / 2}, 450)`}>
           <FaAlignJustify size={14} x={-65} y={0} fill="black" />
-          <chakra.text x={10} y={12} textAnchor="middle" fontSize={14}>
-            {t("section.experience.codeRefactoring")}
+          <chakra.text x={5} y={12} textAnchor="middle" fontSize={14}>
+            {t("section.experience.codeReviews")}
           </chakra.text>
         </g>
         <g transform={`translate(${viewBoxWidth / 2}, 480)`}>
