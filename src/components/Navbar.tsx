@@ -63,6 +63,7 @@ export const Navbar = (): ReactElement => {
       bg={useColorModeValue("#ffffff40", "#20202380")}
       css={{ backdropFilter: "blur(10px)" }}
       zIndex={2}
+      pos={"fixed"}
     >
       <Container display="flex" p={2} maxW="container.md">
         <Flex align="center">
@@ -79,7 +80,6 @@ export const Navbar = (): ReactElement => {
           mt={{ base: 4, md: 0 }}
         >
           <NavbarLink href="/experience" translationKey="experience" />
-          {/* <NavbarLink href="/projects" translationKey="projects" /> */}
           <NavbarLink href="/skills" translationKey="skills" />
           <NavbarLink href="/contact" translationKey="contact" />
         </Stack>
@@ -99,7 +99,6 @@ export const Navbar = (): ReactElement => {
               />
               <MenuList>
                 <MenuLink href="/experience" translationKey="experience" />
-                {/* <MenuLink href="/projects" translationKey="projects" /> */}
                 <MenuLink href="/skills" translationKey="skills" />
                 <MenuLink href="/contact" translationKey="contact" />
               </MenuList>

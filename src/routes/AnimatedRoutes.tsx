@@ -13,7 +13,7 @@ export const AnimatedRoutes = (): ReactElement => {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
       <Routes location={location} key={location.pathname}>
         <Route
           path="/"

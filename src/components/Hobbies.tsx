@@ -1,4 +1,4 @@
-import { chakra, Flex, Text } from "@chakra-ui/react";
+import { chakra, Flex, useColorModeValue } from "@chakra-ui/react";
 import { MotionText } from "@utils/motion";
 import { useTranslationContext } from "@utils/translationContext";
 import { AnimatePresence, motion } from "framer-motion";
@@ -57,6 +57,7 @@ const selectedPathVariants = {
 
 export const Hobbies = (): ReactElement => {
   const { t } = useTranslationContext();
+  const hobbySvgBgColor = useColorModeValue("gray.200", "gray.600");
   const [selectedHobbyIndex, setSelectedHobbyIndex] = useState<number>(0);
 
   return (
@@ -102,14 +103,14 @@ export const Hobbies = (): ReactElement => {
             viewBox="0 0 100 100"
             fill="grassTeal"
             p={1}
-            bgColor={selectedHobbyIndex == index ? "gray.600" : "none"}
+            bgColor={selectedHobbyIndex == index ? hobbySvgBgColor : "none"}
             borderRadius="50%"
             transition="0.5s ease-in-out"
             onClick={() => setSelectedHobbyIndex(index)}
             _hover={{
               cursor: "pointer",
               transform: selectedHobbyIndex == index ? "" : "scale(1.1)",
-              bgColor: "gray.600",
+              bgColor: hobbySvgBgColor,
               transition: "0.5s ease-in-out",
             }}
           >
