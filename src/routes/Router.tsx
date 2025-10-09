@@ -3,13 +3,13 @@ import { ReactElement } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { AnimatedRoutes } from "./AnimatedRoutes";
 import { Footer } from "@components/Footer";
-import { Box } from "@chakra-ui/react";
+import { GlbModelContainer } from "@components/models/GlbModelContainer";
 
 export const Router = (): ReactElement => {
   return (
     <BrowserRouter>
       <Navbar />
-      <Box height={12} />
+      <GlbModelContainer />
       <AnimatedRoutes />
       <Footer />
     </BrowserRouter>
