@@ -1,7 +1,6 @@
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
-import { Object3DEventMap } from "three/src/core/Object3D";
-import { Group } from "three/src/Three.Core";
+import * as THREE from "three";
 
 const dracoLoader = new DRACOLoader();
 dracoLoader.setDecoderConfig({ type: "js" });
@@ -11,7 +10,7 @@ export const loadGLTFModel = (
   path: string,
   isModelCompressed: boolean = true,
   options = { receiveShadow: true, castShadow: true }
-): Promise<Group<Object3DEventMap>> => {
+): Promise<THREE.Group<THREE.Object3DEventMap>> => {
   return new Promise((resolve, reject) => {
     // eslint-disable-next-line @typescript-eslint/naming-convention
     const { receiveShadow, castShadow } = options;
@@ -24,8 +23,9 @@ export const loadGLTFModel = (
       (gltf) => {
         const model = gltf.scene;
         model.name = path;
-        model.position.y = 0;
-        model.position.x = 0;
+        const box = new THREE.Box3().setFromObject(model);
+        const center = box.getCenter(new THREE.Vector3());
+        model.position.sub(center);
         model.receiveShadow = receiveShadow;
         model.castShadow = castShadow;
         model.traverse((child) => {
