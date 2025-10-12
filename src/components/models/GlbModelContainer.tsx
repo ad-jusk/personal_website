@@ -43,7 +43,7 @@ export const GlbModelContainer = (): ReactElement => {
     const target = new THREE.Vector3(0, 2, 0);
     const initialCameraPosition = new THREE.Vector3(
       20 * Math.sin(0.2 * Math.PI),
-      10,
+      50,
       150 * Math.cos(0.2 * Math.PI)
     );
     const scale = height * 0.005 + 6;
@@ -54,14 +54,14 @@ export const GlbModelContainer = (): ReactElement => {
     const ambientLight = new THREE.AmbientLight(0xcccccc, 2.5);
     scene.add(ambientLight);
 
-    const directionalLight = new THREE.DirectionalLight(0xdddddd, Math.PI);
-    const initialDirLightPosition = new THREE.Vector3(0, 10, 0);
-    directionalLight.position.copy(initialDirLightPosition);
-    directionalLight.lookAt(target);
-    directionalLight.castShadow = true;
-    directionalLight.shadow.bias = -0.001;
-    directionalLight.shadow.normalBias = 0.02;
-    scene.add(directionalLight);
+    const directionalLightTop = new THREE.DirectionalLight(0xdddddd, Math.PI);
+    const initialDirLightTopPosition = new THREE.Vector3(0, 10, 0);
+    directionalLightTop.position.copy(initialDirLightTopPosition);
+    directionalLightTop.lookAt(target);
+    directionalLightTop.castShadow = true;
+    directionalLightTop.shadow.bias = -0.001;
+    directionalLightTop.shadow.normalBias = 0.02;
+    scene.add(directionalLightTop);
 
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.autoRotate = true;
@@ -75,7 +75,7 @@ export const GlbModelContainer = (): ReactElement => {
       if (frame <= 100) {
         const p = initialCameraPosition;
         const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20;
-        camera.position.y = 10;
+        camera.position.y = p.y;
         camera.position.x = p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed);
         camera.position.z = p.z * Math.cos(rotSpeed) - p.x * Math.sin(rotSpeed);
         camera.lookAt(target);
@@ -85,7 +85,7 @@ export const GlbModelContainer = (): ReactElement => {
       renderer.render(scene, camera);
     };
 
-    loadGLTFModel("./models/lowpoly_house.glb", true, {
+    loadGLTFModel("./models/lowpoly_desk.glb", true, {
       receiveShadow: true,
       castShadow: true,
     }).then((gltf) => {
@@ -113,8 +113,8 @@ export const GlbModelContainer = (): ReactElement => {
       ref={containerRef}
       mx="auto"
       mb={"50px"}
-      w={[200, 400, 600]}
-      h={[200, 400, 600]}
+      w={[200, 400, 450]}
+      h={[200, 400, 450]}
       pos={"relative"}
       onMouseEnter={(e) => setShowControls(true)}
       onMouseLeave={(e) => setShowControls(false)}
