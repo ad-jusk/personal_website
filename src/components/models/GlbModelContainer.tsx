@@ -5,16 +5,28 @@ import * as THREE from "three";
 import { loadGLTFModel } from "@utils/loadGLTFModel";
 import { GlbSpinner } from "./GlbSpinner";
 import { PiMouseLeftClickFill, PiMouseRightClickFill, PiMouseScrollBold } from "react-icons/pi";
+import { useLocation } from "react-router-dom";
 
 const easeOutCirc = (x: number): number => {
   return Math.sqrt(1 - Math.pow(x - 1, 4));
 };
 
 export const GlbModelContainer = (): ReactElement => {
+  const location = useLocation();
   const [isLoading, setLoading] = useState<boolean>(true);
   const [isShowControls, setShowControls] = useState<boolean>(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
+  const sceneRef = useRef<THREE.Scene | null>(null);
+  const modelRef = useRef<THREE.Group<THREE.Object3DEventMap> | null>(null);
+  const frameRef = useRef<number>(0);
+
+  const pathnameToModel = new Map<string, string>([
+    ["/", "lowpoly_house.glb"],
+    ["/experience", "lowpoly_desk.glb"],
+    ["/skills", "lowpoly_house.glb"],
+    ["/contact", "lowpoly_house.glb"],
+  ]);
 
   const handleWindowResize = useCallback(() => {
     const { current: container } = containerRef;
@@ -24,6 +36,7 @@ export const GlbModelContainer = (): ReactElement => {
     }
   }, []);
 
+  // INIT SCENE ON MOUNT
   useEffect(() => {
     const { current: container } = containerRef;
     if (!container) {
@@ -63,15 +76,20 @@ export const GlbModelContainer = (): ReactElement => {
     directionalLightTop.shadow.normalBias = 0.02;
     scene.add(directionalLightTop);
 
+    sceneRef.current = scene;
+
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.autoRotate = true;
     controls.target = target;
 
     let req: number = 0;
-    let frame: number = 0;
     const animate = () => {
+      const frame = frameRef.current;
       req = requestAnimationFrame(animate);
-      frame = frame <= 100 ? frame + 1 : frame;
+      if (frame == 0) {
+        controls.reset();
+      }
+      frameRef.current = frame <= 100 ? frame + 1 : frame;
       if (frame <= 100) {
         const p = initialCameraPosition;
         const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20;
@@ -84,15 +102,7 @@ export const GlbModelContainer = (): ReactElement => {
       }
       renderer.render(scene, camera);
     };
-
-    loadGLTFModel("./models/lowpoly_desk.glb", true, {
-      receiveShadow: true,
-      castShadow: true,
-    }).then((gltf) => {
-      scene.add(gltf);
-      animate();
-      setLoading(false);
-    });
+    animate();
 
     return () => {
       cancelAnimationFrame(req);
@@ -100,6 +110,29 @@ export const GlbModelContainer = (): ReactElement => {
       renderer.dispose();
     };
   }, []);
+
+  // LOAD MODELS WHEN PATHNAME CHANGES
+  useEffect(() => {
+    const scene = sceneRef.current;
+    const model = modelRef.current;
+    if (!scene) {
+      return;
+    }
+    if (model) {
+      scene.remove(model);
+      modelRef.current = null;
+    }
+    setLoading(true);
+    loadGLTFModel(`./models/${pathnameToModel.get(location.pathname)}`, true, {
+      receiveShadow: true,
+      castShadow: true,
+    }).then((gltf) => {
+      scene.add(gltf);
+      modelRef.current = gltf;
+      frameRef.current = 0;
+      setLoading(false);
+    });
+  }, [location.pathname]);
 
   useEffect(() => {
     window.addEventListener("resize", handleWindowResize, false);
@@ -109,30 +142,33 @@ export const GlbModelContainer = (): ReactElement => {
   }, [handleWindowResize]);
 
   return (
-    <Box
-      ref={containerRef}
-      mx="auto"
-      mb={"50px"}
-      w={[200, 400, 450]}
-      h={[200, 400, 450]}
-      pos={"relative"}
-      onMouseEnter={(e) => setShowControls(true)}
-      onMouseLeave={(e) => setShowControls(false)}
-    >
-      {isLoading && <GlbSpinner />}
-      {!isLoading && isShowControls && (
-        <Flex pos={"absolute"} left={0} bottom={0} columnGap={3}>
-          <Flex align={"center"}>
-            <PiMouseLeftClickFill size={24} /> move
+    <>
+      <Box height={"55px"} />
+      <Box
+        ref={containerRef}
+        mx="auto"
+        mb={"50px"}
+        w={[200, 400, 450]}
+        h={[200, 400, 450]}
+        pos={"relative"}
+        onMouseEnter={(e) => setShowControls(true)}
+        onMouseLeave={(e) => setShowControls(false)}
+      >
+        {isLoading && <GlbSpinner />}
+        {!isLoading && isShowControls && (
+          <Flex pos={"absolute"} left={0} bottom={0} columnGap={3}>
+            <Flex align={"center"}>
+              <PiMouseLeftClickFill size={24} /> move
+            </Flex>
+            <Flex align={"center"}>
+              <PiMouseRightClickFill size={24} /> pan
+            </Flex>
+            <Flex align={"center"}>
+              <PiMouseScrollBold size={24} /> zoom
+            </Flex>
           </Flex>
-          <Flex align={"center"}>
-            <PiMouseRightClickFill size={24} /> pan
-          </Flex>
-          <Flex align={"center"}>
-            <PiMouseScrollBold size={24} /> zoom
-          </Flex>
-        </Flex>
-      )}
-    </Box>
+        )}
+      </Box>
+    </>
   );
 };
