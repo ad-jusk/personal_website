@@ -25,7 +25,7 @@ export const GlbModelContainer = (): ReactElement => {
     ["/", "lowpoly_house.glb"],
     ["/experience", "lowpoly_desk.glb"],
     ["/skills", "lowpoly_house.glb"],
-    ["/contact", "lowpoly_house.glb"],
+    ["/contact", "lowpoly_phone.glb"],
   ]);
 
   const handleWindowResize = useCallback(() => {
