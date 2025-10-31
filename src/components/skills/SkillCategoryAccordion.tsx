@@ -3,11 +3,11 @@ import {
   AccordionButton,
   AccordionIcon,
   AccordionItem,
-  Stack,
   AccordionPanel,
   Box,
   Flex,
   Progress,
+  Stack,
   Tag,
 } from "@chakra-ui/react";
 import { useTranslationContext } from "@utils/translationContext";
@@ -21,46 +21,46 @@ type Props = {
 export const SkillCategoryAccordion = ({ skillCategories }: Props): ReactElement => {
   const { t } = useTranslationContext();
   return (
-    <Stack mt={10} gap={0}>
+    <Stack my={10} gap={5}>
       {skillCategories.map((category) => (
         <Accordion
+          allowMultiple
           allowToggle
           defaultIndex={skillCategories.map((_, index) => index)}
           key={category.categoryTranslationKey}
         >
-          <AccordionItem p={1}>
-            <h2>
-              <AccordionButton>
-                <Box as="span" flex="1" textAlign="left" fontWeight="bold">
-                  {t(category.categoryTranslationKey)}
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-            </h2>
+          <AccordionItem p={1} border={"none"}>
+            <AccordionButton>
+              <Box as="span" flex="1" textAlign="left" fontWeight="bold" fontSize={"large"}>
+                {t(category.categoryTranslationKey)}
+              </Box>
+              <AccordionIcon />
+            </AccordionButton>
             <AccordionPanel pb={4}>
-              <Accordion allowMultiple allowToggle>
+              <Accordion allowMultiple allowToggle defaultIndex={[0]} variant={"plain"}>
                 {category.skills.map((skill) => (
-                  <AccordionItem py={1}>
+                  <AccordionItem borderColor={"grassTeal"} py={1} key={skill.name}>
                     <AccordionButton>
                       <Flex width={"100%"} justify="left" align={"center"}>
-                        <Box textAlign="left" minW="110px">
+                        <Box textAlign="left" minW="110px" fontWeight="bold">
                           {skill.name}
                         </Box>
                       </Flex>
-                      <AccordionIcon ml={1} />
+                      <AccordionIcon />
                     </AccordionButton>
                     <AccordionPanel py={4}>
-                      <Flex align={"center"} mb={10} columnGap={4}>
+                      <Flex align={"center"} justify={"center"} mb={10} columnGap={4}>
                         <Tag>{t("section.skills.beginner")}</Tag>
                         <Progress
                           hasStripe
+                          isAnimated
                           value={skill.knowledgePercentage}
-                          width="20vw"
+                          width="50%"
                           colorScheme={skill.skillColor}
                         />
                         <Tag>{t("section.skills.expert")}</Tag>
                       </Flex>
-                      <Flex gap={3} flexWrap="wrap">
+                      <Flex gap={3} flexWrap="wrap" align={"center"} justify={"center"}>
                         {skill.informationType === "tags"
                           ? skill.tags?.map((tag) => (
                               <Tag key={tag} color={"grassTeal"}>
