@@ -38,41 +38,41 @@ export const SkillCategoryAccordion = ({ skillCategories }: Props): ReactElement
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              {category.skills.map((skill) => (
-                <Accordion allowMultiple key={skill.name}>
+              <Accordion allowMultiple allowToggle>
+                {category.skills.map((skill) => (
                   <AccordionItem py={1}>
                     <AccordionButton>
-                      <Flex width={"100%"} justify="space-between">
-                        <Box textAlign="left" minW="80px">
+                      <Flex width={"100%"} justify="left" align={"center"}>
+                        <Box textAlign="left" minW="110px">
                           {skill.name}
                         </Box>
-                        <Flex align="center" columnGap={2} flexShrink={0}>
-                          <Tag size={"sm"} p={1}>
-                            {t("section.skills.beginner")}
-                          </Tag>
-                          <Progress
-                            hasStripe
-                            value={skill.knowledgePercentage}
-                            width="20vw"
-                            colorScheme={skill.skillColor}
-                          />
-                          <Tag size={"sm"} p={1}>
-                            {t("section.skills.expert")}
-                          </Tag>
-                        </Flex>
                       </Flex>
                       <AccordionIcon ml={1} />
                     </AccordionButton>
                     <AccordionPanel py={4}>
+                      <Flex align={"center"} mb={10} columnGap={4}>
+                        <Tag>{t("section.skills.beginner")}</Tag>
+                        <Progress
+                          hasStripe
+                          value={skill.knowledgePercentage}
+                          width="20vw"
+                          colorScheme={skill.skillColor}
+                        />
+                        <Tag>{t("section.skills.expert")}</Tag>
+                      </Flex>
                       <Flex gap={3} flexWrap="wrap">
                         {skill.informationType === "tags"
-                          ? skill.tags?.map((tag) => <Tag key={tag}>{tag}</Tag>)
+                          ? skill.tags?.map((tag) => (
+                              <Tag key={tag} color={"grassTeal"}>
+                                {tag}
+                              </Tag>
+                            ))
                           : t(skill.textTranslationKey!)}
                       </Flex>
                     </AccordionPanel>
                   </AccordionItem>
-                </Accordion>
-              ))}
+                ))}
+              </Accordion>
             </AccordionPanel>
           </AccordionItem>
         </Accordion>

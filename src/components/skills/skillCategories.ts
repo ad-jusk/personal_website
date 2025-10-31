@@ -115,30 +115,31 @@ export const skillCategories: SkillCategory[] = [
       },
     ],
   },
-  {
-    categoryTranslationKey: "section.skills.gamedev",
-    skills: [
-      {
-        name: "Godot",
-        knowledgePercentage: 60,
-        skillColor: "blue",
-        informationType: "text",
-        textTranslationKey: "section.skills.godot",
-      },
-      {
-        name: "Unity",
-        knowledgePercentage: 45,
-        skillColor: "gray",
-        informationType: "text",
-        textTranslationKey: "section.skills.currentlyLearning",
-      },
-      {
-        name: "Unreal Engine",
-        knowledgePercentage: 30,
-        skillColor: "gray",
-        informationType: "text",
-        textTranslationKey: "section.skills.currentlyLearning",
-      },
-    ],
-  },
+  // TO ADD LATER
+  // {
+  //   categoryTranslationKey: "section.skills.gamedev",
+  //   skills: [
+  //     {
+  //       name: "Godot",
+  //       knowledgePercentage: 60,
+  //       skillColor: "blue",
+  //       informationType: "text",
+  //       textTranslationKey: "section.skills.godot",
+  //     },
+  //     {
+  //       name: "Unity",
+  //       knowledgePercentage: 45,
+  //       skillColor: "gray",
+  //       informationType: "text",
+  //       textTranslationKey: "section.skills.currentlyLearning",
+  //     },
+  //     {
+  //       name: "Unreal Engine",
+  //       knowledgePercentage: 30,
+  //       skillColor: "gray",
+  //       informationType: "text",
+  //       textTranslationKey: "section.skills.currentlyLearning",
+  //     },
+  //   ],
+  // },
 ];

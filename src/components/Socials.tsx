@@ -1,7 +1,6 @@
 import { Flex, Box, As } from "@chakra-ui/react";
 import { ReactElement } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 type Props = {
@@ -21,11 +20,6 @@ export const Socials = ({
     {
       icon: <FaLinkedin />,
       title: "LinkedIn",
-      link: "#",
-    },
-    {
-      icon: <FaXTwitter />,
-      title: "X",
       link: "#",
     },
     {

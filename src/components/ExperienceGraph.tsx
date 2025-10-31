@@ -111,7 +111,7 @@ export const ExperienceGraph = (): ReactElement => {
           fontSize={"sm"}
           fontStyle={"italic"}
         >
-          {`08.2022 - ${t("section.experience.present")}`}
+          08.2022 - 08.2025
         </chakra.text>
       </motion.g>
       {/* Text bottom */}

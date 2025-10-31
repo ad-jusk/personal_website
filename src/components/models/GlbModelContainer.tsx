@@ -118,10 +118,9 @@ export const GlbModelContainer = (): ReactElement => {
     if (!scene) {
       return;
     }
-    if (model) {
-      scene.remove(model);
-      modelRef.current = null;
-    }
+    scene.remove(model as THREE.Object3D);
+    modelRef.current = null;
+
     setLoading(true);
     loadGLTFModel(`./models/${pathnameToModel.get(location.pathname)}`, true, {
       receiveShadow: true,
