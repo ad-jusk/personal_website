@@ -17,9 +17,9 @@
       "hobbies": "Hobbies"
     },
     "paragraphs": {
-      "aboutMe": "Hello, I'm a software developer and applied computer science student based in Poland! I love learning new stuff and using acquired knowledge in practice - either for solo or group projects. I believe that code readability and clean architecture are crucial for implementing a scalable solution.",
-      "aboutMe2": "I consider myself to be well organised, responsible and meticulous. I am comfortable with demanding tasks that require planning and supervising their progress.",
-      "aboutMe3": "As for my professional life, I aim to become a more capable developer every day. I want to combine technical knowledge with soft skills to solve any task with ease!",
+      "aboutMe": "Hello, my name is Adam and I'm a software developer from Poland. I love learning new stuff and using acquired knowledge in practice - either for solo or group projects.",
+      "aboutMe2": "I consider myself to be well organised, responsible and meticulous. I am comfortable with demanding tasks that require planning and supervising their progress. I believe that code readability and clean architecture are crucial for implementing a scalable solution.",
+      "aboutMe3": "As for my professional life, I aim to become a more capable developer every day. I want to combine technical knowledge with soft skills to solve any task with ease.",
       "loremMin": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum risus urna, vel dictum nisi porta non.",
       "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum risus urna, vel dictum nisi porta non. Sed vulputate felis ac sapien pharetra ornare. Praesent tincidunt est nec ex faucibus, rhoncus pharetra tellus lacinia. Donec fringilla urna nisi. Quisque ultricies hendrerit viverra. Maecenas volutpat semper erat, lacinia scelerisque tortor. Morbi consequat mauris lacus, at sollicitudin nunc fringilla a. Nulla non scelerisque dui, eget efficitur dolor. Proin tempus malesuada urna, sit amet pharetra tellus feugiat in. Quisque imperdiet, justo at aliquet tempor, odio nibh vehicula lacus, vel viverra est lectus sed ante."
     },
@@ -27,7 +27,7 @@
       "iLiveHere": "I live in Lodz!"
     },
     "hobbies": {
-      "games": "I love playing and making games!",
+      "games": "I love playing and making games. My favorite games are soulslikes and Monster Hunter series :)",
       "gym": "I believe physical and mental development are equally important.",
       "music": "My favorite music genres are rock and pop."
     },
@@ -60,15 +60,14 @@
       "expert": "Expert",
       "programming": "Programming",
       "tools": "Tools",
-      "gamedev": "Gamedev",
-      "vsCode": "My favorite code editor for most programming languages :)",
-      "intellij": "I use it all the time for Java coding.",
-      "git": "Pretty much mandatory to know.",
-      "visualStudio": "Mostly using it with Unity for gamedev. But I have implemented some C++ apps in it and it works great!",
-      "linux": "I can work in linux environment without a problem.",
+      "vsCode": "My favorite code editor for most programming languages.",
+      "intellij": "My first choice when it comes to Java programming.",
+      "git": "I have worked with git since I started programming so I know all necessary commands.",
+      "visualStudio": "Mostly using it with Unity for gamedev, but I have implemented some C++ apps in it. I am familiar with the interface.",
+      "linux": "I can work in linux environment and know how to do various things from terminal like ssh, crontab, file operations, sudo etc.",
+      "postgres": "I have experience with using Postgres from cli and pgAdmin. I know how to integrate it with Hibernate.",
       "cmake": "I know how to setup and configure a cmake project and that's about it :)",
       "docker": "My computer hates docker so I hardly ever use it. But I have some experience from work.",
-      "godot": "I know Godot pretty well, though I have only made 2D games with it.",
       "currentlyLearning": "Currently learning :)"
     }
   },

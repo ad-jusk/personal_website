@@ -25,22 +25,29 @@ export const SkillCategoryAccordion = ({ skillCategories }: Props): ReactElement
       {skillCategories.map((category) => (
         <Accordion
           allowMultiple
-          allowToggle
           defaultIndex={skillCategories.map((_, index) => index)}
           key={category.categoryTranslationKey}
         >
           <AccordionItem p={1} border={"none"}>
-            <AccordionButton>
-              <Box as="span" flex="1" textAlign="left" fontWeight="bold" fontSize={"large"}>
+            <AccordionButton _hover={{ bgColor: "grassTeal" }}>
+              <Flex
+                flex="1"
+                textAlign="left"
+                fontWeight="bold"
+                fontSize={"large"}
+                columnGap={2}
+                align={"center"}
+              >
                 {t(category.categoryTranslationKey)}
-              </Box>
+                {<category.categoryIcon size={"24px"} />}
+              </Flex>
               <AccordionIcon />
             </AccordionButton>
             <AccordionPanel pb={4}>
-              <Accordion allowMultiple allowToggle defaultIndex={[0]} variant={"plain"}>
+              <Accordion allowMultiple defaultIndex={[0]} variant={"plain"}>
                 {category.skills.map((skill) => (
-                  <AccordionItem borderColor={"grassTeal"} py={1} key={skill.name}>
-                    <AccordionButton>
+                  <AccordionItem borderColor={"grassTeal"} key={skill.name}>
+                    <AccordionButton _hover={{ bgColor: "grassTeal" }}>
                       <Flex width={"100%"} justify="left" align={"center"}>
                         <Box textAlign="left" minW="110px" fontWeight="bold">
                           {skill.name}
@@ -60,7 +67,13 @@ export const SkillCategoryAccordion = ({ skillCategories }: Props): ReactElement
                         />
                         <Tag>{t("section.skills.expert")}</Tag>
                       </Flex>
-                      <Flex gap={3} flexWrap="wrap" align={"center"} justify={"center"}>
+                      <Flex
+                        gap={3}
+                        flexWrap="wrap"
+                        textAlign={"justify"}
+                        align={"center"}
+                        justify={"center"}
+                      >
                         {skill.informationType === "tags"
                           ? skill.tags?.map((tag) => (
                               <Tag key={tag} color={"grassTeal"}>

@@ -9,5 +9,6 @@ export type Skill = {
 
 export type SkillCategory = {
   categoryTranslationKey: string;
+  categoryIcon: React.ElementType;
   skills: Skill[];
 };

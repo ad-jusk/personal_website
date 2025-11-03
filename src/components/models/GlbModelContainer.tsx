@@ -108,21 +108,30 @@ export const GlbModelContainer = (): ReactElement => {
       cancelAnimationFrame(req);
       container.removeChild(renderer.domElement);
       renderer.dispose();
+      sceneRef.current = null;
+      rendererRef.current = null;
+      modelRef.current = null;
     };
   }, []);
 
   // LOAD MODELS WHEN PATHNAME CHANGES
   useEffect(() => {
     const scene = sceneRef.current;
-    const model = modelRef.current;
     if (!scene) {
       return;
     }
+    const model = modelRef.current;
+    const modelPathname = `./models/${pathnameToModel.get(location.pathname)}`;
+    if (model && model.name === modelPathname) {
+      return;
+    }
+
+    // IF NULL IS PASSED NOTHING HAPPENS SO NO NEED TO CHECK
     scene.remove(model as THREE.Object3D);
     modelRef.current = null;
-
     setLoading(true);
-    loadGLTFModel(`./models/${pathnameToModel.get(location.pathname)}`, true, {
+
+    loadGLTFModel(modelPathname, true, {
       receiveShadow: true,
       castShadow: true,
     }).then((gltf) => {
@@ -147,8 +156,8 @@ export const GlbModelContainer = (): ReactElement => {
         ref={containerRef}
         mx="auto"
         mb={"50px"}
-        w={[200, 400, 450]}
-        h={[200, 400, 450]}
+        w={[300, 400, 450]}
+        h={[300, 400, 450]}
         pos={"relative"}
         onMouseEnter={(e) => setShowControls(true)}
         onMouseLeave={(e) => setShowControls(false)}

@@ -1,8 +1,10 @@
 import { SkillCategory } from "@utils/types";
+import { FaLaptopCode, FaTools } from "react-icons/fa";
 
 export const skillCategories: SkillCategory[] = [
   {
     categoryTranslationKey: "section.skills.programming",
+    categoryIcon: FaLaptopCode,
     skills: [
       {
         name: "Java",
@@ -18,12 +20,13 @@ export const skillCategories: SkillCategory[] = [
           "MapStruct",
           "Swagger",
           "JavaFX",
+          "JUnit",
           "Future API",
         ],
       },
       {
         name: "JavaScript",
-        knowledgePercentage: 90,
+        knowledgePercentage: 80,
         skillColor: "yellow",
         informationType: "tags",
         tags: [
@@ -31,11 +34,14 @@ export const skillCategories: SkillCategory[] = [
           "Chakra UI",
           "framer-motion",
           "d3",
+          "i18n",
           "three.js",
           "axios",
           "jquery",
           "RxJs",
+          "Promise API",
           "npm",
+          "eslint",
         ],
       },
       {
@@ -47,10 +53,10 @@ export const skillCategories: SkillCategory[] = [
       },
       {
         name: "C#",
-        knowledgePercentage: 70,
+        knowledgePercentage: 60,
         skillColor: "purple",
         informationType: "tags",
-        tags: ["Task API", "LINQ", "Windows Forms"],
+        tags: ["Task API", "LINQ", "WPF"],
       },
       {
         name: "C++",
@@ -63,6 +69,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     categoryTranslationKey: "section.skills.tools",
+    categoryIcon: FaTools,
     skills: [
       {
         name: "VS Code",
@@ -100,6 +107,13 @@ export const skillCategories: SkillCategory[] = [
         textTranslationKey: "section.skills.linux",
       },
       {
+        name: "Postgres",
+        knowledgePercentage: 70,
+        skillColor: "blue",
+        informationType: "text",
+        textTranslationKey: "section.skills.postgres",
+      },
+      {
         name: "CMake",
         knowledgePercentage: 50,
         skillColor: "green",
@@ -115,31 +129,4 @@ export const skillCategories: SkillCategory[] = [
       },
     ],
   },
-  // TO ADD LATER
-  // {
-  //   categoryTranslationKey: "section.skills.gamedev",
-  //   skills: [
-  //     {
-  //       name: "Godot",
-  //       knowledgePercentage: 60,
-  //       skillColor: "blue",
-  //       informationType: "text",
-  //       textTranslationKey: "section.skills.godot",
-  //     },
-  //     {
-  //       name: "Unity",
-  //       knowledgePercentage: 45,
-  //       skillColor: "gray",
-  //       informationType: "text",
-  //       textTranslationKey: "section.skills.currentlyLearning",
-  //     },
-  //     {
-  //       name: "Unreal Engine",
-  //       knowledgePercentage: 30,
-  //       skillColor: "gray",
-  //       informationType: "text",
-  //       textTranslationKey: "section.skills.currentlyLearning",
-  //     },
-  //   ],
-  // },
 ];

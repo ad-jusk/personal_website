@@ -17,9 +17,9 @@
       "hobbies": "Zainteresowania"
     },
     "paragraphs": {
-      "aboutMe": "Cześć, jestem inżynierem oprogramowania i studentem informatyki stosowanej mieszkającym w Polsce! Uwielbiam naukę nowych rzeczy i wykorzystanie zdobytej wiedzy w praktyce - zarówno we własnych jak i grupowych projektach. Uważam, że czytelność kodu oraz czysta architektura jest niezbędna do zbudowania działającego rozwiązania.",
-      "aboutMe2": "Uważam się za osobę zorganizowaną, odpowiedzialną i skrupulatną. Lubię pracować nad skomplikowanymi zadaniami, które wymagają zaplanowania i nadzorowania postępów.",
-      "aboutMe3": "W życiu zawodowym, stawiam na codzienny rozwój umiejętności. Chcę łączyć wiedzę techniczną z umiejętnościami miękkimi, tak aby moja praca była jak najwydajniejsza.",
+      "aboutMe": "Cześć, nazywam się Adam i jestem inżynierem oprogramowania mieszkającym w Polsce! Uwielbiam naukę nowych rzeczy i wykorzystanie zdobytej wiedzy w praktyce - zarówno w indywidualnych, jak i grupowych projektach.",
+      "aboutMe2": "Uważam się za osobę zorganizowaną, odpowiedzialną i skrupulatną. Lubię pracować nad skomplikowanymi zadaniami, które wymagają zaplanowania i nadzorowania postępów. Uważam, że czytelność kodu oraz czysta architektura jest niezbędna do zbudowania działającego rozwiązania.",
+      "aboutMe3": "W życiu zawodowym stawiam na codzienny rozwój umiejętności. Chcę łączyć wiedzę techniczną z umiejętnościami miękkimi, tak aby moja praca była jak najwydajniejsza.",
       "loremMin": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum risus urna, vel dictum nisi porta non.",
       "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum risus urna, vel dictum nisi porta non. Sed vulputate felis ac sapien pharetra ornare. Praesent tincidunt est nec ex faucibus, rhoncus pharetra tellus lacinia. Donec fringilla urna nisi. Quisque ultricies hendrerit viverra. Maecenas volutpat semper erat, lacinia scelerisque tortor. Morbi consequat mauris lacus, at sollicitudin nunc fringilla a. Nulla non scelerisque dui, eget efficitur dolor. Proin tempus malesuada urna, sit amet pharetra tellus feugiat in. Quisque imperdiet, justo at aliquet tempor, odio nibh vehicula lacus, vel viverra est lectus sed ante."
     },
@@ -27,7 +27,7 @@
       "iLiveHere": "Jestem z Łodzi!"
     },
     "hobbies": {
-      "games": "Uwielbiam grać i tworzyć gry!",
+      "games": "Uwielbiam grać i tworzyć gry. Moje ulubione gry to soulsliki i seria Monster Hunter :)",
       "gym": "Uważam, że rozwój fizyczny i mentalny powinny iść w parze",
       "music": "Moje ulubione gatunki muzyczne to rock i pop."
     },
@@ -60,15 +60,14 @@
       "expert": "Ekspert",
       "programming": "Programowanie",
       "tools": "Narzędzia",
-      "gamedev": "Gamedev",
-      "vsCode": "Mój ulubiony edytor kodu dla większości języków programowania :)",
-      "intellij": "Używam go cały czas do programowania w Javie.",
-      "git": "Niezbędny w każdym projekcie.",
-      "visualStudio": "Głównie używam go z Unity do tworzenia gier. Ale zaimplementowałem w nim kilka aplikacji w C++ i działa świetnie!",
-      "linux": "Nie mam problemów z pracą z linuxem.",
+      "vsCode": "Mój ulubiony edytor kodu do większości języków programowania.",
+      "intellij": "Edytor pierszego wyboru do programowania w Javie.",
+      "git": "Używam gita odkąd zacząłem programować, więc znam wszystkie potrzebne komendy.",
+      "visualStudio": "Głównie używam go z Unity do tworzenia gier, ale zaimplementowałem w nim kilka aplikacji w C++. Jestem zaznajomiony z interfejsem.",
+      "linux": "Nie mam problemów z pracą z linuxem, potrafię poruszać się w terminalu i znam wiele komend takich jak ssh, crontab, sudo, operacje na plikach itd.",
+      "postgres": "Mam doświadczenie w pracy z Postgresem z poziomu cli oraz pgAdmin. Umiem zintegrować bazę z Hibernate.",
       "cmake": "Umiem skonfigurować projekt w cmake i to w zasadzie tyle :)",
       "docker": "Mój komputer nie przepada za dockerem, więc rzadko go używam. Ale mam trochę doświadczenia z pracy.",
-      "godot": "Znam Godota całkiem dobrze, chociaż tworzyłem tylko gry 2D.",
       "currentlyLearning": "Obecnie się uczę :)"
     }
   },
