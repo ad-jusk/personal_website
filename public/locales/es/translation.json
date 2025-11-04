@@ -1,0 +1,82 @@
+{
+  "signs": "á é í ó ú Á É Í Ó Ú ü Ü ñ Ñ ¡ ¿ « »",
+  "home": "Inicio",
+  "experience": "Experiencia",
+  "projects": "Proyectos",
+  "skills": "Habilidades",
+  "contact": "Contacto",
+  "TUL": "Universidad Tecnológica Lodz",
+  "copyright": "Adam Juśkiewicz. Todos los derechos reservados.",
+  "loading": "Cargando",
+
+  "section": {
+    "headers": {
+      "aboutMe": "Sobre mí",
+      "education": "Educación",
+      "socials": "¡Puedes encontrarme aquí también!",
+      "languages": "Idiomas",
+      "hobbies": "Pasatiempos"
+    },
+    "paragraphs": {
+      "aboutMe": "Hola, me llamo Adam y soy un desarrollador de software de Polonia. Me encanta aprender nuevas cosas y aplicar el conocimiento en la práctica, sea en proyectos individuales o grupales.",
+      "aboutMe2": "Me considero bien organizado, responsable y meticuloso. Me siento cómodo con tareas exigentes que requieren planificación y supervisión de su progreso. Creo que la legibilidad del código y la arquitectura limpia son fundamentales para implementar una solución escalable.",
+      "aboutMe3": "En cuanto a mi vida profesional, mi objetivo es convertirme en un desarrollador más capaz cada día. Quiero combinar conocimiento técnico con habilidades blandas para resolver cualquier tarea con facilidad.",
+      "loremMin": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum risus urna, vel dictum nisi porta non.",
+      "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum risus urna, vel dictum nisi porta non. Sed vulputate felis ac sapien pharetra ornare. Praesent tincidunt est nec ex faucibus, rhoncus pharetra tellus lacinia. Donec fringilla urna nisi. Quisque ultricies hendrerit viverra. Maecenas volutpat semper erat, lacinia scelerisque tortor. Morbi consequat mauris lacus, at sollicitudin nunc fringilla a. Nulla non scelerisque dui, eget efficitur dolor. Proin tempus malesuada urna, sit amet pharetra tellus feugiat in. Quisque imperdiet, justo at aliquet tempor, odio nibh vehicula lacus, vel viverra est lectus sed ante."
+    },
+    "decor": {
+      "iLiveHere": "¡Vivo en Lodz!"
+    },
+    "hobbies": {
+      "games": "Me encanta jugar y crear videojuegos. Mis favoritos son soulslikes y la serie Monster Hunter :)",
+      "gym": "Creo que el desarrollo físico y mental son igualmente importantes.",
+      "music": "Mis favoritos tipos de música son pop y rock."
+    },
+    "languages": {
+      "spanish": "Español",
+      "polish": "Polaco",
+      "english": "Inglés",
+      "native": "Nativo"
+    },
+    "education": {
+      "masterDegree": "Maestría en Cómputo aplicado",
+      "masterSpec": "Juegos y sistemas interactivos",
+      "bachelorDegree": "Licenciado en Computación",
+      "bachelorSpec": "Tecnologías web"
+    },
+    "experience": {
+      "at": "en",
+      "workingOn": "trabajando en",
+      "medicalImageViewer": "Visor de imágenes médicas",
+      "myTasks": "Mis tareas",
+      "bugFixing": "Bugfixing",
+      "codeReviews": "Revisión código",
+      "documentationWriting": "Escribir documentación",
+      "testing": "Pruebas unitarias e integración",
+      "ux": "Diseñar nuevas funcionalidades",
+      "newFeatures": "Implementar funcionalidades médicas"
+    },
+    "skills": {
+      "beginner": "Principiante",
+      "expert": "Experto",
+      "programming": "Programación",
+      "tools": "Herramientas",
+      "vsCode": "Mi favorito editor de código para la mayoría de lenguajes.",
+      "intellij": "Mi primera opción cuando se trata de programación en Java.",
+      "git": "He usado git desde empecé a programar, así que conozco todos los comandos necesarios.",
+      "visualStudio": "Lo uso principalmente con Unity para el desarrollo de juegos, pero he implementado algunas aplicaciónes en C++ también. Estoy familiarizado con la interfaz.",
+      "linux": "Puedo trabajar con linux y sé hacer varias cosas desde la terminal como ssh, crontab, operaciones de archivos, sudo, etc.",
+      "postgres": "Tengo experiencia usando Postgres desde la linea de comandos y pgAdmin. Sé integrarlo con Hibernate",
+      "cmake": "Puedo iniciar y configurar un proyecto con CMake y eso es todo :)",
+      "docker": "A mi ordenador le odia Docker asi que no lo uso con frequencia. Pero tengo alguna experiencia de trabajo.",
+      "currentlyLearning": "Estoy aprendiendo :)"
+    }
+  },
+
+  "form": {
+    "email": "Email",
+    "name": "Nombre",
+    "message": "Tu mensaje",
+    "send": "Enviar"
+  }
+}
