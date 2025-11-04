@@ -20,19 +20,19 @@ export const Socials = ({
     {
       icon: <FaLinkedin />,
       title: "LinkedIn",
-      link: "#",
+      link: "https://pl.linkedin.com/in/adam-juskiewicz",
     },
     {
       icon: <FaGithub />,
       title: "GitHub",
-      link: "#",
+      link: "https://github.com/ad-jusk",
     },
   ];
 
   return (
     <Flex w="100%" dir={iconsDirection} justify={iconsJustify} p={iconsPadding}>
       {socials.map((social) => (
-        <Link to={social.link} key={social.title}>
+        <Link to={social.link} target="blank" key={social.title}>
           <Box
             as={social.icon.type as As | undefined}
             boxSize={iconsSizes}

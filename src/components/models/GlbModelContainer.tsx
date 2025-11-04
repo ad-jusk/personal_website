@@ -38,6 +38,9 @@ export const GlbModelContainer = (): ReactElement => {
 
   // INIT SCENE ON MOUNT
   useEffect(() => {
+    if (sceneRef.current && rendererRef.current) {
+      return;
+    }
     const { current: container } = containerRef;
     if (!container) {
       return;
@@ -110,7 +113,6 @@ export const GlbModelContainer = (): ReactElement => {
       renderer.dispose();
       sceneRef.current = null;
       rendererRef.current = null;
-      modelRef.current = null;
     };
   }, []);
 
@@ -120,21 +122,18 @@ export const GlbModelContainer = (): ReactElement => {
     if (!scene) {
       return;
     }
-    const model = modelRef.current;
     const modelPathname = `./models/${pathnameToModel.get(location.pathname)}`;
-    if (model && model.name === modelPathname) {
-      return;
-    }
 
-    // IF NULL IS PASSED NOTHING HAPPENS SO NO NEED TO CHECK
-    scene.remove(model as THREE.Object3D);
-    modelRef.current = null;
     setLoading(true);
 
     loadGLTFModel(modelPathname, true, {
       receiveShadow: true,
       castShadow: true,
     }).then((gltf) => {
+      const toRemove: THREE.Object3D[] = scene.children.filter(
+        (obj) => obj.name === modelRef.current?.name
+      );
+      toRemove.forEach((obj) => scene.remove(obj));
       scene.add(gltf);
       modelRef.current = gltf;
       frameRef.current = 0;
