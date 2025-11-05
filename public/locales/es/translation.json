@@ -13,7 +13,7 @@
     "headers": {
       "aboutMe": "Sobre mí",
       "education": "Educación",
-      "socials": "¡Puedes encontrarme aquí también!",
+      "socials": "¡Puedes encontrarme aquí!",
       "languages": "Idiomas",
       "hobbies": "Pasatiempos"
     },
@@ -77,6 +77,6 @@
     "email": "Email",
     "name": "Nombre",
     "message": "Tu mensaje",
-    "send": "Enviar"
+    "send": "¡Enviar"
   }
 }

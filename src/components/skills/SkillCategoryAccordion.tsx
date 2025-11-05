@@ -57,7 +57,7 @@ export const SkillCategoryAccordion = ({ skillCategories }: Props): ReactElement
                     </AccordionButton>
                     <AccordionPanel py={4}>
                       <Flex align={"center"} justify={"center"} mb={10} columnGap={4}>
-                        <Tag>{t("section.skills.beginner")}</Tag>
+                        <Tag size={{ base: "xs", sm: "md" }}>{t("section.skills.beginner")}</Tag>
                         <Progress
                           hasStripe
                           isAnimated
@@ -65,7 +65,7 @@ export const SkillCategoryAccordion = ({ skillCategories }: Props): ReactElement
                           width="50%"
                           colorScheme={skill.skillColor}
                         />
-                        <Tag>{t("section.skills.expert")}</Tag>
+                        <Tag size={{ base: "xs", sm: "md" }}>{t("section.skills.expert")}</Tag>
                       </Flex>
                       <Flex
                         gap={3}

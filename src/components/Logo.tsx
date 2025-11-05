@@ -1,6 +1,7 @@
 import { useColorModeValue, Text } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { LeafIcon } from "@icons/LeafIcon";
+import { useTranslationContext } from "@utils/translationContext";
 import { ReactElement } from "react";
 import { Link } from "react-router-dom";
 
@@ -24,9 +25,10 @@ const LogoBox = styled.span`
 
 export const Logo = (): ReactElement => {
   const logoColor = useColorModeValue("#27272A", "#FAFAFA");
+  const { t } = useTranslationContext();
   return (
     <Link to="/">
-      <LogoBox>
+      <LogoBox title={t("home")}>
         <LeafIcon fill={logoColor} />
         <Text ml={2} color={logoColor} fontFamily='M PLUS Rounded 1c", sans-serif'>
           Adam Juśkiewicz

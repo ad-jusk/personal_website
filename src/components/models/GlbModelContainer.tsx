@@ -24,7 +24,7 @@ export const GlbModelContainer = (): ReactElement => {
   const pathnameToModel = new Map<string, string>([
     ["/", "lowpoly_house.glb"],
     ["/experience", "lowpoly_desk.glb"],
-    ["/skills", "lowpoly_house.glb"],
+    ["/skills", "lowpoly_trophy.glb"],
     ["/contact", "lowpoly_phone.glb"],
   ]);
 
@@ -71,13 +71,28 @@ export const GlbModelContainer = (): ReactElement => {
     scene.add(ambientLight);
 
     const directionalLightTop = new THREE.DirectionalLight(0xdddddd, Math.PI);
-    const initialDirLightTopPosition = new THREE.Vector3(0, 10, 0);
+    const initialDirLightTopPosition = new THREE.Vector3(0, 20, 0);
     directionalLightTop.position.copy(initialDirLightTopPosition);
     directionalLightTop.lookAt(target);
+    directionalLightTop.intensity = 2;
     directionalLightTop.castShadow = true;
     directionalLightTop.shadow.bias = -0.001;
     directionalLightTop.shadow.normalBias = 0.02;
     scene.add(directionalLightTop);
+
+    const directionalLightFront = new THREE.DirectionalLight(0xdddddd, Math.PI);
+    const initialDirLightFrontPosition = new THREE.Vector3(0, 10, 20);
+    directionalLightFront.position.copy(initialDirLightFrontPosition);
+    directionalLightFront.lookAt(target);
+    directionalLightFront.intensity = 2;
+    scene.add(directionalLightFront);
+
+    const directionalLightBack = new THREE.DirectionalLight(0xdddddd, Math.PI);
+    const initialDirLightBackPosition = new THREE.Vector3(0, 10, -20);
+    directionalLightBack.position.copy(initialDirLightBackPosition);
+    directionalLightBack.lookAt(target);
+    directionalLightBack.intensity = 2;
+    scene.add(directionalLightBack);
 
     sceneRef.current = scene;
 
