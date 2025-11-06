@@ -18,7 +18,7 @@
       "hobbies": "Pasatiempos"
     },
     "paragraphs": {
-      "aboutMe": "Hola, me llamo Adam y soy un desarrollador de software de Polonia. Me encanta aprender nuevas cosas y aplicar el conocimiento en la práctica, sea en proyectos individuales o grupales.",
+      "aboutMe": "Hola, me llamo Adam, soy un desarrollador de software y vivo en Polonia. Me encanta aprender nuevas cosas y aplicar el conocimiento en la práctica, sea en proyectos individuales o grupales.",
       "aboutMe2": "Me considero bien organizado, responsable y meticuloso. Me siento cómodo con tareas exigentes que requieren planificación y supervisión de su progreso. Creo que la legibilidad del código y la arquitectura limpia son fundamentales para implementar una solución escalable.",
       "aboutMe3": "En cuanto a mi vida profesional, mi objetivo es convertirme en un desarrollador más capaz cada día. Quiero combinar conocimiento técnico con habilidades blandas para resolver cualquier tarea con facilidad.",
       "loremMin": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum risus urna, vel dictum nisi porta non.",
@@ -29,7 +29,7 @@
     },
     "hobbies": {
       "games": "Me encanta jugar y crear videojuegos. Mis favoritos son soulslikes y la serie Monster Hunter :)",
-      "gym": "Creo que el desarrollo físico y mental son igualmente importantes.",
+      "gym": "Paso mucho tiempo en el gimnasio. Creo que el desarrollo físico y mental son igualmente importantes.",
       "music": "Mis favoritos tipos de música son pop y rock."
     },
     "languages": {
@@ -63,10 +63,11 @@
       "tools": "Herramientas",
       "vsCode": "Mi favorito editor de código para la mayoría de lenguajes.",
       "intellij": "Mi primera opción cuando se trata de programación en Java.",
-      "git": "He usado git desde empecé a programar, así que conozco todos los comandos necesarios.",
+      "git": "He usado git desde empecé a programar, así que conozco todos los comandos necesarios. Tengo experiencia con Github y Gitlab.",
       "visualStudio": "Lo uso principalmente con Unity para el desarrollo de juegos, pero he implementado algunas aplicaciónes en C++ también. Estoy familiarizado con la interfaz.",
       "linux": "Puedo trabajar con linux y sé hacer varias cosas desde la terminal como ssh, crontab, operaciones de archivos, sudo, etc.",
       "postgres": "Tengo experiencia usando Postgres desde la linea de comandos y pgAdmin. Sé integrarlo con Hibernate",
+      "atlassian": "Sé usar productos de Atlassian como Jira, Confluence y Bamboo. Estaba activamente involucrado en planear los sprints.",
       "cmake": "Puedo iniciar y configurar un proyecto con CMake y eso es todo :)",
       "docker": "A mi ordenador le odia Docker asi que no lo uso con frequencia. Pero tengo alguna experiencia de trabajo.",
       "currentlyLearning": "Estoy aprendiendo :)"
@@ -77,6 +78,10 @@
     "email": "Email",
     "name": "Nombre",
     "message": "Tu mensaje",
-    "send": "¡Enviar"
+    "send": "¡Enviar",
+    "messageSent": "¡Mensaje enviado",
+    "respondASAP": "¡Responderé lo antes posible",
+    "error": "Se ocurrió un error - trata otra vez por favor.",
+    "oops": "¡Ups"
   }
 }

@@ -28,7 +28,7 @@
     },
     "hobbies": {
       "games": "Uwielbiam grać i tworzyć gry. Moje ulubione gry to soulslike i seria Monster Hunter :)",
-      "gym": "Uważam, że rozwój fizyczny i mentalny powinny iść w parze",
+      "gym": "Dużo czasu spędzam na siłowni. Uważam, że rozwój fizyczny i mentalny powinny iść w parze.",
       "music": "Moje ulubione gatunki muzyczne to rock i pop."
     },
     "languages": {
@@ -49,9 +49,9 @@
       "medicalImageViewer": "Przeglądarką medyczną",
       "myTasks": "Moje zadania",
       "bugFixing": "Bugfixing",
-      "codeReviews": "Code reviews",
+      "codeReviews": "Recenzje kodu",
       "documentationWriting": "Pisanie dokumentacji",
-      "testing": "Pisanie testów do aplikacji",
+      "testing": "Testy jednostkowe i integracyjne",
       "ux": "Design nowych funkcjonalności",
       "newFeatures": "Implementowanie nowych funkcji"
     },
@@ -62,10 +62,11 @@
       "tools": "Narzędzia",
       "vsCode": "Mój ulubiony edytor kodu do większości języków programowania.",
       "intellij": "Edytor pierszego wyboru do programowania w Javie.",
-      "git": "Używam gita odkąd zacząłem programować, więc znam wszystkie potrzebne komendy.",
+      "git": "Używam gita odkąd zacząłem programować, więc znam wszystkie potrzebne komendy. Mam doświadczenie z Githubem i Gitlabem.",
       "visualStudio": "Głównie używam go z Unity do tworzenia gier, ale zaimplementowałem w nim kilka aplikacji w C++. Jestem zaznajomiony z interfejsem.",
       "linux": "Nie mam problemów z pracą z linuxem, potrafię poruszać się w terminalu i znam wiele komend takich jak ssh, crontab, sudo, operacje na plikach itd.",
       "postgres": "Mam doświadczenie w pracy z Postgresem z poziomu cli oraz pgAdmin. Umiem zintegrować bazę z Hibernate.",
+      "atlassian": "Potrafię korzysać z narzędzi Atlassiana takich jak Jira, Confluence czy Bamboo. Czynnie brałem udział w planowaniu sprintów.",
       "cmake": "Umiem skonfigurować projekt w cmake i to w zasadzie tyle :)",
       "docker": "Mój komputer nie przepada za dockerem, więc rzadko go używam. Ale mam trochę doświadczenia z pracy.",
       "currentlyLearning": "Obecnie się uczę :)"
@@ -76,6 +77,10 @@
     "email": "Email",
     "name": "Imię",
     "message": "Twoja wiadomość",
-    "send": "Wyślij"
+    "send": "Wyślij",
+    "messageSent": "Wiadomość wysłana",
+    "respondASAP": "Odpiszę tak szybko jak to możliwe",
+    "error": "Coś poszło nie tak - spróbuj ponownie.",
+    "oops": "Ups"
   }
 }

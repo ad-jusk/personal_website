@@ -3,6 +3,7 @@ import MapChart from "@components/MapChart";
 import { Page } from "@components/Page";
 import { CustomSection } from "@components/section/CustomSection";
 import { Socials } from "@components/Socials";
+import { HttpError } from "@utils/httpError";
 import { useTranslationContext } from "@utils/translationContext";
 import { FormEvent, ReactElement, useState } from "react";
 
@@ -25,20 +26,24 @@ const ContactForm = (): ReactElement => {
       });
       if (res.ok) {
         toast({
-          title: "Message sent!",
-          description: "I will reply ASAP!",
+          title: `${t("form.messageSent")}!`,
+          description: `${t("form.respondASAP")}!`,
           status: "success",
           duration: 5000,
           isClosable: true,
           position: "top",
         });
       } else {
-        throw new Error("Network response was not ok.");
+        throw new HttpError("Error while sending email", res.status);
       }
     } catch (err) {
+      let description = t("form.error");
+      if (err instanceof HttpError) {
+        description += ` (HTTP ${err.status})`;
+      }
       toast({
-        title: "Oops!",
-        description: "Something went wrong - please try again.",
+        title: `${t("form.oops")}!`,
+        description: description,
         status: "error",
         duration: 5000,
         isClosable: true,

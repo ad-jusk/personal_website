@@ -132,38 +132,38 @@ export const ExperienceGraph = (): ReactElement => {
           {t("section.experience.myTasks")}
         </chakra.text>
         <g transform={`translate(${viewBoxWidth / 2}, 420)`}>
-          <FaBug size={14} x={-50} y={0} fill="black" />
-          <chakra.text x={5} y={12} textAnchor="middle" fontSize={14}>
+          <FaBug size={15} x={-50} y={0} fill="black" />
+          <chakra.text x={5} y={12} textAnchor="middle" fontSize={13}>
             {t("section.experience.bugFixing")}
           </chakra.text>
         </g>
         <g transform={`translate(${viewBoxWidth / 2}, 450)`}>
-          <FaAlignJustify size={14} x={-65} y={0} fill="black" />
-          <chakra.text x={5} y={12} textAnchor="middle" fontSize={14}>
+          <FaAlignJustify size={15} x={-65} y={0} fill="black" />
+          <chakra.text x={5} y={12} textAnchor="middle" fontSize={13}>
             {t("section.experience.codeReviews")}
           </chakra.text>
         </g>
         <g transform={`translate(${viewBoxWidth / 2}, 480)`}>
-          <FaNewspaper size={14} x={-80} y={0} fill="black" />
-          <chakra.text x={15} y={12} textAnchor="middle" fontSize={14}>
+          <FaNewspaper size={15} x={-80} y={0} fill="black" />
+          <chakra.text x={15} y={12} textAnchor="middle" fontSize={13}>
             {t("section.experience.documentationWriting")}
           </chakra.text>
         </g>
         <g transform={`translate(${viewBoxWidth / 2}, 510)`}>
-          <FaCheck size={14} x={-95} y={0} fill="black" />
-          <chakra.text x={15} y={12} textAnchor="middle" fontSize={14}>
-            {t("section.experience.testing")}
-          </chakra.text>
-        </g>
-        <g transform={`translate(${viewBoxWidth / 2}, 540)`}>
-          <FaPaintBrush size={14} x={-110} y={0} fill="black" />
-          <chakra.text x={8} y={12} textAnchor="middle" fontSize={14}>
+          <FaPaintBrush size={15} x={-95} y={0} fill="black" />
+          <chakra.text x={15} y={12} textAnchor="middle" fontSize={13}>
             {t("section.experience.ux")}
           </chakra.text>
         </g>
+        <g transform={`translate(${viewBoxWidth / 2}, 540)`}>
+          <FaCheck size={15} x={-110} y={0} fill="black" />
+          <chakra.text x={8} y={12} textAnchor="middle" fontSize={13}>
+            {t("section.experience.testing")}
+          </chakra.text>
+        </g>
         <g transform={`translate(${viewBoxWidth / 2}, 570)`}>
-          <FaCode size={14} x={-125} y={0} fill="black" />
-          <chakra.text x={10} y={12} textAnchor="middle" fontSize={14}>
+          <FaCode size={15} x={-125} y={0} fill="black" />
+          <chakra.text x={10} y={12} textAnchor="middle" fontSize={13}>
             {t("section.experience.newFeatures")}
           </chakra.text>
         </g>

@@ -114,6 +114,13 @@ export const skillCategories: SkillCategory[] = [
         textTranslationKey: "section.skills.postgres",
       },
       {
+        name: "Atlassian",
+        knowledgePercentage: 70,
+        skillColor: "cyan",
+        informationType: "text",
+        textTranslationKey: "section.skills.atlassian",
+      },
+      {
         name: "CMake",
         knowledgePercentage: 50,
         skillColor: "green",

@@ -18,10 +18,10 @@ export const EducationGraph = (): ReactElement => {
             fill="none"
           />
           <FaGraduationCap size="25px" x="8.5" y="67.5" />
-          <chakra.text x="50" dx="5" y="10" fill="grassTeal" fontSize="10" fontWeight="bold">
+          <chakra.text x="50" dx="5" y="10" fill="grassTeal" fontSize="9" fontWeight="bold">
             03.2024 - 10.2025
           </chakra.text>
-          <chakra.text x="50" dx="5" y="30" dy="5" fill="grassTeal" fontSize="10" fontWeight="bold">
+          <chakra.text x="50" dx="5" y="30" dy="5" fill="grassTeal" fontSize="9" fontWeight="bold">
             {t("TUL")}
           </chakra.text>
           <chakra.text fill={useColorModeValue("black", "white")}>
@@ -42,18 +42,10 @@ export const EducationGraph = (): ReactElement => {
             fill="none"
           />
           <FaGraduationCap size="25px" x="8.5" y="147.5" />
-          <chakra.text x="50" dx="5" y="90" fill="grassTeal" fontSize="10" fontWeight="bold">
+          <chakra.text x="50" dx="5" y="90" fill="grassTeal" fontSize="9" fontWeight="bold">
             10.2020 - 03.2024
           </chakra.text>
-          <chakra.text
-            x="50"
-            dx="5"
-            y="110"
-            dy="5"
-            fill="grassTeal"
-            fontSize="10"
-            fontWeight="bold"
-          >
+          <chakra.text x="50" dx="5" y="110" dy="5" fill="grassTeal" fontSize="9" fontWeight="bold">
             {t("TUL")}
           </chakra.text>
           <chakra.text fill={useColorModeValue("black", "white")}>
