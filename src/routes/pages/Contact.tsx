@@ -1,26 +1,74 @@
-import { Button, Flex, FormControl, FormLabel, Input, Textarea } from "@chakra-ui/react";
+import { Button, Flex, FormControl, FormLabel, Input, Textarea, useToast } from "@chakra-ui/react";
 import MapChart from "@components/MapChart";
 import { Page } from "@components/Page";
 import { CustomSection } from "@components/section/CustomSection";
 import { Socials } from "@components/Socials";
 import { useTranslationContext } from "@utils/translationContext";
-import { ReactElement } from "react";
+import { FormEvent, ReactElement, useState } from "react";
 
 const ContactForm = (): ReactElement => {
+  const toast = useToast();
+  const [isLoading, setLoading] = useState<boolean>(false);
   const { t } = useTranslationContext();
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
+    e.preventDefault();
+    setLoading(true);
+
+    const formData = new FormData(e.currentTarget);
+    formData.append("_captcha", "false");
+
+    try {
+      const res = await fetch("https://formsubmit.co/#email", {
+        method: "POST",
+        body: formData,
+      });
+      if (res.ok) {
+        toast({
+          title: "Message sent!",
+          description: "I will reply ASAP!",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+          position: "top",
+        });
+      } else {
+        throw new Error("Network response was not ok.");
+      }
+    } catch (err) {
+      toast({
+        title: "Oops!",
+        description: "Something went wrong - please try again.",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+        position: "top",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <Flex direction="column" rowGap={2} w={{ base: "70%", md: "60%" }}>
+    <Flex
+      as="form"
+      onSubmit={(e) => handleSubmit(e as unknown as FormEvent<HTMLFormElement>)}
+      direction="column"
+      rowGap={2}
+      w={{ base: "70%", md: "60%" }}
+    >
       <FormControl isRequired>
         <FormLabel>{t("form.name")}</FormLabel>
-        <Input type="text" _hover={{}} borderColor="grassTeal" />
+        <Input name="name" type="text" _hover={{}} borderColor="grassTeal" />
       </FormControl>
       <FormControl isRequired>
         <FormLabel>{t("form.email")}</FormLabel>
-        <Input type="email" _hover={{}} borderColor="grassTeal" />
+        <Input name="email" type="email" _hover={{}} borderColor="grassTeal" />
       </FormControl>
       <FormControl isRequired>
         <FormLabel>{t("form.message")}</FormLabel>
         <Textarea
+          name="message"
           size="xl"
           minH="200px"
           resize="none"
@@ -30,7 +78,8 @@ const ContactForm = (): ReactElement => {
           borderColor="grassTeal"
         />
       </FormControl>
-      <Button mt={3} mx="auto" bg="grassTeal" _hover={{}}>
+      <Input name="_honey" type="text" display="none" />
+      <Button type="submit" mt={3} mx="auto" bg="grassTeal" _hover={{}} isLoading={isLoading}>
         {`${t("form.send")}!`}
       </Button>
     </Flex>
