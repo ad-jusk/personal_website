@@ -3,6 +3,7 @@ import { useTranslationContext } from "@utils/translationContext";
 import { motion, useMotionValue } from "framer-motion";
 import { ReactElement, useEffect, useRef, useState } from "react";
 import { FaAlignJustify, FaBug, FaCheck, FaCode, FaNewspaper, FaPaintBrush } from "react-icons/fa";
+import { FaArrowRightToBracket } from "react-icons/fa6";
 
 export const ExperienceGraph = (): ReactElement => {
   const theme = useTheme();
@@ -98,6 +99,15 @@ export const ExperienceGraph = (): ReactElement => {
         <chakra.text x={viewBoxWidth / 2} y={65} textAnchor="middle" fontWeight={"bold"}>
           Pixel Technology
         </chakra.text>
+        <chakra.a
+          href="https://pixeltechnology.com/"
+          target="blank"
+          color="blue"
+          _hover={{ color: "blue.600" }}
+        >
+          <rect x={viewBoxWidth / 2 + 62.5} y={52.5} width="20" height="20" fill="transparent" />
+          <FaArrowRightToBracket x={viewBoxWidth / 2 + 65} y={55} size="14px" />
+        </chakra.a>
         <chakra.text x={viewBoxWidth / 2} y={85} textAnchor="middle" fontSize={"sm"}>
           {t("section.experience.workingOn")}
         </chakra.text>

@@ -4,7 +4,7 @@ import { mode, StyleFunctionProps } from "@chakra-ui/theme-tools";
 const styles = {
   global: (props: StyleFunctionProps) => ({
     body: {
-      bg: mode("#fefefe", "#3a2e39")(props),
+      bg: mode("#eeeeee", "#3a2e39")(props),
     },
     // eslint-disable-next-line @typescript-eslint/naming-convention
     "::-webkit-scrollbar": {

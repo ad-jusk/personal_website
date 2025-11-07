@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { Box, Flex, Heading, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, Heading, useColorModeValue, Image } from "@chakra-ui/react";
 import { Page } from "@components/Page";
 import { TextSection } from "@components/section/TextSection";
 import { CustomSection } from "@components/section/CustomSection";
@@ -28,15 +28,17 @@ const Home = (): ReactElement => {
         </Flex>
         <Box flexShrink={0} textAlign="center" mt={{ base: 8, md: 0 }}>
           <Box
-            borderColor={useColorModeValue("blackAlpha.800", "whiteAlpha.800")}
-            borderWidth={2}
+            borderColor={"grassTeal"}
+            borderWidth={4}
             borderStyle="solid"
-            w="100px"
-            h="100px"
+            w="120px"
+            h="120px"
             display="inline-block"
             borderRadius="full"
             overflow="hidden"
-          ></Box>
+          >
+            <Image src="./photo.jpg" />
+          </Box>
         </Box>
       </Box>
       <Flex direction="column" rowGap={10}>

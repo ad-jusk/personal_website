@@ -22,6 +22,7 @@ export const skillCategories: SkillCategory[] = [
           "JavaFX",
           "JUnit",
           "Future API",
+          "Stream API",
         ],
       },
       {
