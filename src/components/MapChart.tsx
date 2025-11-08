@@ -15,7 +15,7 @@ const MapChart = (): ReactElement => {
         scale: 1200,
       }}
     >
-      <Geographies geography="/map.json" fill="#88ccca" stroke={strokeColor} strokeWidth={0.5}>
+      <Geographies geography="./map.json" fill="#88ccca" stroke={strokeColor} strokeWidth={0.5}>
         {({ geographies }) =>
           geographies.map((geo) => <Geography key={geo.rsmKey} geography={geo} />)
         }

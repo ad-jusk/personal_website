@@ -7,7 +7,7 @@ import { GlbModelContainer } from "@components/models/GlbModelContainer";
 
 export const Router = (): ReactElement => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/personal_website/">
       <Navbar />
       <GlbModelContainer />
       <AnimatedRoutes />
