@@ -12,7 +12,6 @@ const ContactForm = (): ReactElement => {
   const [isLoading, setLoading] = useState<boolean>(false);
   const { t } = useTranslationContext();
 
-  // UNUSABLE ON GITHUB PAGES DUE TO CORS ON FETCH :(
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
     setLoading(true);
@@ -21,12 +20,12 @@ const ContactForm = (): ReactElement => {
     formData.append("_captcha", "false");
 
     try {
-      const res = await fetch("https://formsubmit.co/<email>", {
+      const res = await fetch("https://formsubmit.co/235885@edu.p.lodz.pl", {
         method: "POST",
         body: formData,
         mode: "no-cors",
       });
-      if (res.ok) {
+      if (true) {
         toast({
           title: `${t("form.messageSent")}!`,
           description: `${t("form.respondASAP")}!`,
@@ -59,21 +58,8 @@ const ContactForm = (): ReactElement => {
   return (
     <Flex
       as="form"
-      action="https://formsubmit.co/adam.a.juskiewicz@gmail.com"
-      method="POST"
-      target="dummyframe"
-      // THIS IS UGLY BUT I HAVE TO SEND REQUEST WITHOUT CORS AND I STILL WANNA DISPLAY FEEDBACK.
-      // I'D RATHER USE FETCH THAN FORM ACTION BUT SADLY THIS IS THE RECOMMENDED WAY.
-      // SO I HAVE HIGH HOPES THAT THE REQUEST WILL NOT FAIL.
-      onSubmit={() => {
-        toast({
-          title: `${t("form.messageSent")}!`,
-          description: `${t("form.respondASAP")}!`,
-          status: "success",
-          duration: 5000,
-          isClosable: true,
-          position: "top",
-        });
+      onSubmit={(e) => {
+        handleSubmit(e as unknown as FormEvent<HTMLFormElement>);
       }}
       direction="column"
       rowGap={2}
