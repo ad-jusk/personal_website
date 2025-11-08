@@ -65,7 +65,7 @@
       "git": "Używam gita odkąd zacząłem programować, więc znam wszystkie potrzebne komendy. Mam doświadczenie z Githubem i Gitlabem.",
       "visualStudio": "Głównie używam go z Unity do tworzenia gier, ale zaimplementowałem w nim kilka aplikacji w C++. Jestem zaznajomiony z interfejsem.",
       "linux": "Nie mam problemów z pracą z linuxem, potrafię poruszać się w terminalu i znam wiele komend takich jak ssh, crontab, sudo, operacje na plikach itd.",
-      "postgres": "Mam doświadczenie w pracy z Postgresem z poziomu cli oraz pgAdmin. Umiem zintegrować bazę z Hibernate.",
+      "postgres": "Mam doświadczenie w pracy z Postgresem z poziomu cli oraz pgAdmin. Umiem zintegrować bazę z Hibernate oraz znam koncept ORM.",
       "atlassian": "Potrafię korzysać z narzędzi Atlassiana takich jak Jira, Confluence czy Bamboo. Czynnie brałem udział w planowaniu sprintów.",
       "cmake": "Umiem skonfigurować projekt w cmake i to w zasadzie tyle :)",
       "docker": "Mój komputer nie przepada za dockerem, więc rzadko go używam. Ale mam trochę doświadczenia z pracy.",

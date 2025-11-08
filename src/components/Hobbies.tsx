@@ -94,7 +94,7 @@ export const Hobbies = (): ReactElement => {
           </MotionText>
         </AnimatePresence>
       </Flex>
-      <Flex columnGap={5}>
+      <Flex mt={{ base: 5, md: 0 }} columnGap={5}>
         {hobbies.map((hobby, index) => (
           <chakra.svg
             key={index}

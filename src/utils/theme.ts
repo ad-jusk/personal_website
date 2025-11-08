@@ -8,8 +8,14 @@ const styles = {
     },
     // eslint-disable-next-line @typescript-eslint/naming-convention
     "::-webkit-scrollbar": {
-      width: "0px",
+      width: "3px",
       background: "transparent",
+    },
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    "::-webkit-scrollbar-thumb": {
+      width: "3px",
+      borderRadius: "10px",
+      background: "grassTeal",
     },
   }),
 };

@@ -20,7 +20,7 @@ const ContactForm = (): ReactElement => {
     formData.append("_captcha", "false");
 
     try {
-      const res = await fetch("https://formsubmit.co/#email", {
+      const res = await fetch("https://formsubmit.co/adam.a.juskiewicz@gmail.com", {
         method: "POST",
         body: formData,
       });
