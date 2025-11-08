@@ -17,10 +17,9 @@ const ContactForm = (): ReactElement => {
     setLoading(true);
 
     const formData = new FormData(e.currentTarget);
-    formData.append("_captcha", "false");
 
     try {
-      const res = await fetch("https://formsubmit.co/235885@edu.p.lodz.pl", {
+      const res = await fetch("https://formsubmit.co/adam.a.juskiewicz@gmail.com", {
         method: "POST",
         body: formData,
         mode: "no-cors",
@@ -89,8 +88,6 @@ const ContactForm = (): ReactElement => {
       {/*INPUTS FOR FORMSUBMIT REGARDING CAPTCHA AND OTHER STUFF*/}
       <input type="hidden" name="_captcha" value="false" />
       <input type="text" name="_honey" style={{ display: "none" }} />
-      {/*DUMMY FRAME TO PREVENT REDIRECTING*/}
-      <iframe name="dummyframe" id="dummyframe" style={{ display: "none" }}></iframe>
       <Button type="submit" mt={3} mx="auto" bg="grassTeal" _hover={{}} isLoading={isLoading}>
         {`${t("form.send")}!`}
       </Button>
