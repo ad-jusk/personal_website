@@ -23,8 +23,12 @@ const ContactForm = (): ReactElement => {
       const res = await fetch("https://formsubmit.co/adam.a.juskiewicz@gmail.com", {
         method: "POST",
         body: formData,
+        mode: "no-cors", // BECAUSE OF CORS ON GITHUB PAGES
       });
-      if (res.ok) {
+      // THIS IS UGLY BUT I HAVE TO SEND REQUEST WITHOUT CORS AND I STILL WANNA DISPLAY FEEDBACK.
+      // I'D RATHER USE FETCH THAN FORM ACTION. SO I HAVE HIGH FAITH THAT THE REQUEST WILL NOT FAIL.
+      const isResOk = true;
+      if (isResOk) {
         toast({
           title: `${t("form.messageSent")}!`,
           description: `${t("form.respondASAP")}!`,
