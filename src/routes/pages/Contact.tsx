@@ -12,6 +12,7 @@ const ContactForm = (): ReactElement => {
   const [isLoading, setLoading] = useState<boolean>(false);
   const { t } = useTranslationContext();
 
+  // UNUSABLE ON GITHUB PAGES DUE TO CORS ON FETCH :(
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
     setLoading(true);
@@ -20,15 +21,12 @@ const ContactForm = (): ReactElement => {
     formData.append("_captcha", "false");
 
     try {
-      const res = await fetch("https://formsubmit.co/adam.a.juskiewicz@gmail.com", {
+      const res = await fetch("https://formsubmit.co/<email>", {
         method: "POST",
         body: formData,
-        mode: "no-cors", // BECAUSE OF CORS ON GITHUB PAGES
+        mode: "no-cors",
       });
-      // THIS IS UGLY BUT I HAVE TO SEND REQUEST WITHOUT CORS AND I STILL WANNA DISPLAY FEEDBACK.
-      // I'D RATHER USE FETCH THAN FORM ACTION. SO I HAVE HIGH FAITH THAT THE REQUEST WILL NOT FAIL.
-      const isResOk = true;
-      if (isResOk) {
+      if (res.ok) {
         toast({
           title: `${t("form.messageSent")}!`,
           description: `${t("form.respondASAP")}!`,
@@ -61,7 +59,22 @@ const ContactForm = (): ReactElement => {
   return (
     <Flex
       as="form"
-      onSubmit={(e) => handleSubmit(e as unknown as FormEvent<HTMLFormElement>)}
+      action="https://formsubmit.co/adam.a.juskiewicz@gmail.com"
+      method="POST"
+      target="dummyframe"
+      // THIS IS UGLY BUT I HAVE TO SEND REQUEST WITHOUT CORS AND I STILL WANNA DISPLAY FEEDBACK.
+      // I'D RATHER USE FETCH THAN FORM ACTION BUT SADLY THIS IS THE RECOMMENDED WAY.
+      // SO I HAVE HIGH HOPES THAT THE REQUEST WILL NOT FAIL.
+      onSubmit={() => {
+        toast({
+          title: `${t("form.messageSent")}!`,
+          description: `${t("form.respondASAP")}!`,
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+          position: "top",
+        });
+      }}
       direction="column"
       rowGap={2}
       w={{ base: "70%", md: "60%" }}
@@ -87,7 +100,11 @@ const ContactForm = (): ReactElement => {
           borderColor="grassTeal"
         />
       </FormControl>
-      <Input name="_honey" type="text" display="none" />
+      {/*INPUTS FOR FORMSUBMIT REGARDING CAPTCHA AND OTHER STUFF*/}
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="text" name="_honey" style={{ display: "none" }} />
+      {/*DUMMY FRAME TO PREVENT REDIRECTING*/}
+      <iframe name="dummyframe" id="dummyframe" style={{ display: "none" }}></iframe>
       <Button type="submit" mt={3} mx="auto" bg="grassTeal" _hover={{}} isLoading={isLoading}>
         {`${t("form.send")}!`}
       </Button>
