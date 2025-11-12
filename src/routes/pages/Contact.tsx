@@ -24,6 +24,8 @@ const ContactForm = (): ReactElement => {
         body: formData,
         mode: "no-cors",
       });
+      // GITHUB PAGES REQUIRES NO CORS IN FETCH AND THAT MEANS I HAVE NO WAY OF CHECKING
+      // RESPONSE. I HAVE HIGH HOPES THAT IT WILL WORK :)
       if (true) {
         toast({
           title: `${t("form.messageSent")}!`,

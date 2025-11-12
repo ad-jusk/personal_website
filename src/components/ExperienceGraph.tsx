@@ -24,8 +24,9 @@ export const ExperienceGraph = (): ReactElement => {
       const yFlipThresholdTop = svgRect.top + scrollY + svgRect.height / 4;
       const yFlipThresholdBottom = svgRect.bottom - scrollY - svgRect.height / 4;
       const isScrollAtTop = scrollY == 0;
+      const bottomOffset = 5;
       const isScrollAtBottom =
-        scrollY + window.innerHeight >= document.documentElement.scrollHeight - 1;
+        scrollY + window.innerHeight >= document.documentElement.scrollHeight - bottomOffset;
       if (isScrollAtBottom || scrollY > yFlipThresholdTop) {
         setIsDown(true);
       } else if (isScrollAtTop || scrollY > yFlipThresholdBottom) {
