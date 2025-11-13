@@ -23,7 +23,7 @@ const Home = (): ReactElement => {
             py={1}
             zIndex={-1}
           >
-            <p>Fullstack Software Developer</p>
+            <p>Full Stack Software Developer</p>
           </Box>
         </Flex>
         <Box flexShrink={0} textAlign="center" mt={{ base: 8, md: 0 }}>
