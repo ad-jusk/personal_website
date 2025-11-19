@@ -68,6 +68,7 @@
       "linux": "Puedo trabajar con linux y sé hacer varias cosas desde la terminal como ssh, crontab, operaciones de archivos, sudo, etc.",
       "postgres": "Tengo experiencia usando Postgres desde la linea de comandos y pgAdmin. Sé integrarlo con Hibernate y estoy familiarizado con el concepto de ORM.",
       "atlassian": "Sé usar productos de Atlassian como Jira, Confluence y Bamboo. Estaba activamente involucrado en planear los sprints.",
+      "liquibase": "Estoy familiarizado con usar liquibase con Spring Boot, generar changelogs con maven plugin y ejecutar liquibase como un bean.",
       "cmake": "Puedo iniciar y configurar un proyecto con CMake y eso es todo :)",
       "docker": "A mi ordenador le odia Docker asi que no lo uso con frequencia. Pero tengo alguna experiencia de trabajo.",
       "currentlyLearning": "Estoy aprendiendo :)"

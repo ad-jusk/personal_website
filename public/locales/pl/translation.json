@@ -67,6 +67,7 @@
       "linux": "Nie mam problemów z pracą z linuxem, potrafię poruszać się w terminalu i znam wiele komend takich jak ssh, crontab, sudo, operacje na plikach itd.",
       "postgres": "Mam doświadczenie w pracy z Postgresem z poziomu cli oraz pgAdmin. Umiem zintegrować bazę z Hibernate oraz znam koncept ORM.",
       "atlassian": "Potrafię korzysać z narzędzi Atlassiana takich jak Jira, Confluence czy Bamboo. Czynnie brałem udział w planowaniu sprintów.",
+      "liquibase": "Mam doświadczenie w używaniu liquibase razem ze Spring Bootem, znam proces generowania changelogów za pomocą plugina mavena oraz uruchamiania liquibase z poziomu beana.",
       "cmake": "Umiem skonfigurować projekt w cmake i to w zasadzie tyle :)",
       "docker": "Mój komputer nie przepada za dockerem, więc rzadko go używam. Ale mam trochę doświadczenia z pracy.",
       "currentlyLearning": "Obecnie się uczę :)"
