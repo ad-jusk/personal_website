@@ -36,7 +36,7 @@ export const skillCategories: SkillCategory[] = [
           "Chakra UI",
           "Material UI",
           "framer-motion",
-          "d3",
+          "Redux",
           "i18n",
           "three.js",
           "axios",
@@ -125,7 +125,7 @@ export const skillCategories: SkillCategory[] = [
       },
       {
         name: "Liquibase",
-        knowledgePercentage: 55,
+        knowledgePercentage: 70,
         skillColor: "red",
         informationType: "text",
         textTranslationKey: "section.skills.liquibase",
